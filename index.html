@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taaj The Techie 🌻</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #2f3e13; /* Dark olive */
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      padding: 40px 40px 60px;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #556b2f; /* Olive green */
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    header h1 .sunflower {
+      font-size: 2.8rem;
+      animation: spin 8s linear infinite;
+    }
+    header p.tagline {
+      font-style: italic;
+      color: #d4af37; /* Gold */
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-top: 0.25rem;
+      letter-spacing: 0.03em;
+    }
+    section {
+      margin-top: 2rem;
+      line-height: 1.65;
+      font-weight: 400;
+      font-size: 1.15rem;
+    }
+    section h2 {
+      color: #556b2f;
+      font-weight: 700;
+      font-size: 1.7rem;
+      margin-bottom: 0.7rem;
+      border-bottom: 3px solid #d4af37;
+      padding-bottom: 6px;
+      max-width: max-content;
+    }
+    p {
+      margin-bottom: 1.3rem;
+      color: #405521;
+    }
+    a {
+      color: #d4af37;
+      font-weight: 700;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #556b2f;
+      text-decoration: underline;
+    }
+    /* Footer style */
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #888a4f;
+      font-style: italic;
+      user-select: none;
+    }
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+      .container {
+        padding: 30px 20px 40px;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      header h1 .sunflower {
+        font-size: 2rem;
+      }
+      section h2 {
+        font-size: 1.4rem;
+      }
+      section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>
+        <span class="sunflower" aria-hidden="true">🌻</span>
+        Taaj The Techie – Learning Cyber, Living Life
+        <span class="sunflower" aria-hidden="true">🌻</span>
+      </h1>
+      <p class="tagline">Where sunflowers, security, and self-growth meet.</p>
+    </header>
+
+    <section>
+      <h2>Hey, I’m Taaj!</h2>
+      <p>
+        I'm a young Black woman on a journey into the world of cybersecurity, learning on my Mac Silicon. This blog is a fun personal space where I document little pieces of my growth as I explore tech and life.
+      </p>
+    </section>
+
+    <section>
+      <h2>Creative Side</h2>
+      <p>
+        I love arts and crafts, painting, and still believe in the joy of flipping through physical books. Museums and hiking help keep me grounded and sane in a busy world.
+      </p>
+    </section>
+
+    <section>
+      <h2>My Favorite Title: Mom</h2>
+      <p>
+        I’m a proud mom to a wonderful family. 💛
+      </p>
+    </section>
+
+    <section>
+      <h2>What’s Next?</h2>
+      <p>
+        This blog is just the beginning. I plan to build it up with more stories, tech wins, and reflections. Thanks for stopping by!
+      </p>
+      <p>
+        <strong>Let's connect with <a href="https://www.instagram.com/steamforme/" target="_blank" rel="noopener noreferrer">@STEAMforMe</a></strong>
+      </p>
+    </section>
+
+    <div class="footer">
+      &copy; 2025 Taaj Matthews | Built with 💻 & 🌻
+    </div>
+  </div>
+</body>
+</html>
