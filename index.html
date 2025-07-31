@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Taaj The Techie 🌻</title>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     /* Reset and base */
@@ -13,15 +14,16 @@
       padding: 0;
     }
     body {
-      font-family: 'Brush Script MT', cursive, 'Segoe Script', 'Comic Sans MS', cursive;
+      font-family: 'Poppins', sans-serif;
       background: url('https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #2f3e13;
+      color: #556b2f; /* Olive green text */
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       padding: 40px 20px;
+      position: relative;
       overflow-x: hidden;
     }
     .container {
@@ -29,156 +31,94 @@
       max-width: 720px;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      padding: 40px 40px 60px;
+      padding: 50px 50px 70px;
       animation: fadeIn 1.2s ease forwards;
       position: relative;
       z-index: 1;
-      font-family: inherit; /* inherit cursive */
+      color: #556b2f;
     }
     header {
       text-align: center;
-      margin-bottom: 1rem;
-    }
-    header h1 {
-      font-weight: 700;
-      font-size: 2.8rem;
-      color: #556b2f;
-      margin-bottom: 0.2rem;
-      letter-spacing: 0.05em;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-family: inherit; /* cursive */
-    }
-    header h1 .sunflower {
-      font-size: 2.8rem;
-      animation: spin 8s linear infinite;
-    }
-    header p.tagline {
-      font-style: italic;
-      color: #d4af37;
-      font-weight: 600;
-      font-size: 1.15rem;
-      margin-top: 0.25rem;
-      letter-spacing: 0.03em;
-      font-family: inherit;
-    }
-    section {
-      margin-top: 2rem;
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Taaj The Techie 🌻</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    /* Reset and base */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Brush Script MT', cursive, 'Segoe Script', 'Comic Sans MS', cursive;
-      background: url('https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #2f3e13;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 20px;
-      overflow-x: hidden;
-    }
-    .container {
-      background: rgba(255, 255, 255, 0.95);
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      padding: 40px 40px 60px;
-      animation: fadeIn 1.2s ease forwards;
+      margin-bottom: 1.5rem;
       position: relative;
-      z-index: 1;
-      font-family: inherit; /* inherit cursive */
-    }
-    header {
-      text-align: center;
-      margin-bottom: 1rem;
     }
     header h1 {
-      font-weight: 700;
-      font-size: 2.8rem;
-      color: #556b2f;
-      margin-bottom: 0.2rem;
-      letter-spacing: 0.05em;
+      font-weight: 900;
+      font-size: 4rem;
+      color: #d4af37; /* Gold */
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.1em;
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      font-family: inherit; /* cursive */
+      gap: 12px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
     }
     header h1 .sunflower {
-      font-size: 2.8rem;
-      animation: spin 8s linear infinite;
+      font-size: 4rem;
+      animation: spin 10s linear infinite;
     }
     header p.tagline {
       font-style: italic;
-      color: #d4af37;
-      font-weight: 600;
-      font-size: 1.15rem;
-      margin-top: 0.25rem;
-      letter-spacing: 0.03em;
-      font-family: inherit;
+      color: #bdae4b; /* Muted yellow */
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin-top: 0.35rem;
+      letter-spacing: 0.04em;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
     section {
-      margin-top: 2rem;
-      line-height: 1.65;
-      font-weight: 400;
-      font-size: 1.15rem;
-      font-family: inherit;
+      margin-top: 2.5rem;
+      line-height: 1.75;
+      font-weight: 500;
+      font-size: 1.35rem;
+      padding: 0 12px;
+      color: #556b2f;
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.85);
     }
     section h2 {
-      color: #556b2f;
-      font-weight: 700;
-      font-size: 1.7rem;
-      margin-bottom: 0.7rem;
-      border-bottom: 3px solid #d4af37;
-      padding-bottom: 6px;
+      color: #d4af37;
+      font-weight: 900;
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+      border-bottom: 4px solid #bdae4b;
+      padding-bottom: 10px;
       max-width: max-content;
-      font-family: inherit;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
     }
     p {
-      margin-bottom: 1.3rem;
-      color: #405521;
-      font-family: inherit;
+      margin-bottom: 1.8rem;
     }
     a {
       color: #d4af37;
       font-weight: 700;
       text-decoration: none;
       transition: color 0.3s ease;
-      font-family: inherit;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
     a:hover {
       color: #556b2f;
       text-decoration: underline;
     }
-    .sunflowers {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 2rem;
-      gap: 12px;
+    /* Sunflower floating images */
+    .sunflower-float {
+      position: absolute;
+      width: 100px;
+      z-index: 0;
+      animation: floatUpDown 6s ease-in-out infinite;
+      filter: drop-shadow(1.5px 1.5px 2.5px rgba(0,0,0,0.25));
+      user-select: none;
     }
-    .sunflowers img {
-      height: 100px;
-      animation: floatUpDown 5s ease-in-out infinite;
-      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
-    }
+    .sunflower-float:nth-child(1) { top: 40px; left: 6%; animation-delay: 0s; }
+    .sunflower-float:nth-child(2) { top: 140px; right: 8%; animation-delay: 2s; }
+    .sunflower-float:nth-child(3) { bottom: 80px; left: 15%; animation-delay: 4s; }
+    .sunflower-float:nth-child(4) { bottom: 100px; right: 20%; animation-delay: 6s; }
+    .sunflower-float:nth-child(5) { top: 220px; left: 30%; animation-delay: 1s; }
+    .sunflower-float:nth-child(6) { top: 180px; right: 30%; animation-delay: 3s; }
+    .sunflower-float:nth-child(7) { bottom: 40px; left: 35%; animation-delay: 5s; }
+
     @keyframes floatUpDown {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
     @keyframes fadeIn {
       from {
@@ -198,41 +138,45 @@
         transform: rotate(360deg);
       }
     }
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 0.95rem;
-      color: #888a4f;
-      font-style: italic;
-      user-select: none;
-      font-family: inherit;
-    }
+    /* Responsive */
     @media (max-width: 768px) {
       body {
         padding: 20px 10px;
       }
       .container {
         padding: 30px 20px 40px;
+        max-width: 90vw;
       }
       header h1 {
-        font-size: 2rem;
+        font-size: 2.8rem;
       }
       header h1 .sunflower {
-        font-size: 2rem;
+        font-size: 2.8rem;
+      }
+      header p.tagline {
+        font-size: 1.1rem;
       }
       section h2 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
       }
-      section p {
-        font-size: 1rem;
-      }
-      .sunflowers img {
-        height: 80px;
+      section {
+        font-size: 1.1rem;
+        padding: 0 8px;
       }
     }
   </style>
 </head>
 <body>
+
+  <!-- Floating sunflowers -->
+  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
+  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
+  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
+  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
+  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
+  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
+  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
+
   <div class="container" role="main">
     <header>
       <h1>
@@ -274,17 +218,10 @@
       </p>
     </section>
 
-    <div class="sunflowers">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_from_Silesia2.jpg/800px-Sunflower_from_Silesia2.jpg" alt="Sunflower">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_sky_backdrop.jpg" alt="Sunflower">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_from_Silesia2.jpg" alt="Sunflower">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_sky_backdrop.jpg" alt="Sunflower">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_from_Silesia2.jpg/800px-Sunflower_from_Silesia2.jpg" alt="Sunflower">
-    </div>
-
     <div class="footer">
       &copy; 2025 Taaj Matthews | Built with 💻 & 🌻
     </div>
   </div>
+
 </body>
 </html>
