@@ -11,10 +11,11 @@
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       background-color: #808000; /* Olive Green */
-      background-image: url('https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?auto=format&fit=crop&w=1400&q=80');
+      background-image: url('https://images.unsplash.com/photo-1603232644140-bb47da511b39'); /* Black women background */
       background-repeat: no-repeat;
       background-position: center center;
       background-attachment: fixed;
@@ -28,53 +29,33 @@
       position: relative;
       overflow-x: hidden;
     }
-    .sunflower-float {
-      position: absolute;
-      width: 140px;
-      z-index: 0;
-      animation: floaty 8s ease-in-out infinite;
-      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.4));
-    }
-    .sunflower-float:nth-child(1) { top: 30px; left: 5%; animation-delay: 0s; }
-    .sunflower-float:nth-child(2) { top: 120px; right: 10%; animation-delay: 3s; }
-    .sunflower-float:nth-child(3) { bottom: 60px; left: 15%; animation-delay: 5s; }
-    .sunflower-float:nth-child(4) { bottom: 100px; right: 20%; animation-delay: 7s; }
-    @keyframes floaty {
-      0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-25px) rotate(3deg); }
-      100% { transform: translateY(0) rotate(0deg); }
-    }
+
     .container {
-      background: rgba(85, 107, 47, 0.95); /* Dark Olive Green with transparency */
-      max-width: 720px;
+      background: rgba(85, 107, 47, 0.92); /* Dark Olive Green overlay */
+      max-width: 800px;
       border-radius: 16px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
       padding: 40px 40px 60px;
       animation: fadeIn 1.2s ease forwards;
       position: relative;
       z-index: 1;
-      color: #f0e68c; /* Khaki/Yellow text */
+      color: #f0e68c;
     }
+
     header {
       text-align: center;
       margin-bottom: 1rem;
     }
+
     header h1 {
       font-weight: 900;
       font-size: 3.8rem;
       color: #f0e68c;
       margin-bottom: 0.2rem;
       letter-spacing: 0.08em;
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
-    .sunflower {
-      font-size: 3.8rem;
-      animation: spin 10s linear infinite;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-    }
+
     header p.tagline {
       font-style: italic;
       color: #fffacd; /* Lemon Chiffon */
@@ -84,6 +65,7 @@
       letter-spacing: 0.04em;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
+
     section {
       margin-top: 2rem;
       line-height: 1.7;
@@ -93,6 +75,7 @@
       color: #f0e68c;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
     }
+
     section h2 {
       color: #fffacd;
       font-weight: 900;
@@ -103,9 +86,11 @@
       max-width: max-content;
       text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
     }
+
     p {
       margin-bottom: 1.5rem;
     }
+
     a {
       color: #f0e68c;
       font-weight: 700;
@@ -113,10 +98,33 @@
       transition: color 0.3s ease;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     }
+
     a:hover {
       color: #fffacd;
       text-decoration: underline;
     }
+
+    .sunflowers {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      gap: 10px;
+    }
+
+    .sunflowers img {
+      height: 120px;
+      margin: 5px;
+      animation: floatUpDown 5s ease-in-out infinite;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    }
+
+    @keyframes floatUpDown {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+
     .footer {
       margin-top: 3rem;
       text-align: center;
@@ -126,6 +134,7 @@
       user-select: none;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
+
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -136,14 +145,7 @@
         transform: translateY(0);
       }
     }
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
+
     @media (max-width: 768px) {
       body {
         padding: 20px 10px;
@@ -152,9 +154,6 @@
         padding: 30px 20px 40px;
       }
       header h1 {
-        font-size: 2.8rem;
-      }
-      .sunflower {
         font-size: 2.8rem;
       }
       section h2 {
@@ -166,24 +165,16 @@
       .footer {
         font-size: 0.9rem;
       }
+      .sunflowers img {
+        height: 80px;
+      }
     }
   </style>
 </head>
 <body>
-
-  <!-- Floating sunflowers in the background -->
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-
   <div class="container" role="main">
     <header>
-      <h1>
-        <span class="sunflower" aria-hidden="true">🌻</span>
-        Taaj The Techie – Learning Cyber, Living Life
-        <span class="sunflower" aria-hidden="true">🌻</span>
-      </h1>
+      <h1>Taaj The Techie 🌻</h1>
       <p class="tagline">Where sunflowers, security, and self-growth meet.</p>
     </header>
 
@@ -217,6 +208,14 @@
         <strong>Let's connect with <a href="https://www.instagram.com/steamforme/" target="_blank" rel="noopener noreferrer">@STEAMforMe</a> and shoutout to The Knowledge House for all their support.</strong>
       </p>
     </section>
+
+    <div class="sunflowers">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_from_Silesia2.jpg" alt="Sunflower">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_sky_backdrop.jpg" alt="Sunflower">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_from_Silesia2.jpg" alt="Sunflower">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_sky_backdrop.jpg" alt="Sunflower">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_from_Silesia2.jpg" alt="Sunflower">
+    </div>
 
     <div class="footer">
       &copy; 2025 Taaj Matthews | Built with 💻 & 🌻
