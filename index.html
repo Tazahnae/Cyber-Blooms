@@ -6,146 +6,207 @@
   <title>Taaj The Techie 🌻</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    /* Reset and base */
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
-
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #808000; /* Olive Green */
-      background-image: url('https://images.unsplash.com/photo-1603232644140-bb47da511b39'); /* Black women background */
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-attachment: fixed;
+      font-family: 'Brush Script MT', cursive, 'Segoe Script', 'Comic Sans MS', cursive;
+      background: url('https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #f0e68c; /* Khaki/Yellow */
+      color: #2f3e13;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       padding: 40px 20px;
-      position: relative;
       overflow-x: hidden;
     }
-
     .container {
-      background: rgba(85, 107, 47, 0.92); /* Dark Olive Green overlay */
-      max-width: 800px;
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 720px;
       border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
       padding: 40px 40px 60px;
       animation: fadeIn 1.2s ease forwards;
       position: relative;
       z-index: 1;
-      color: #f0e68c;
+      font-family: inherit; /* inherit cursive */
     }
-
     header {
       text-align: center;
       margin-bottom: 1rem;
     }
-
     header h1 {
-      font-weight: 900;
-      font-size: 3.8rem;
-      color: #f0e68c;
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #556b2f;
       margin-bottom: 0.2rem;
-      letter-spacing: 0.08em;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: inherit; /* cursive */
     }
-
+    header h1 .sunflower {
+      font-size: 2.8rem;
+      animation: spin 8s linear infinite;
+    }
     header p.tagline {
       font-style: italic;
-      color: #fffacd; /* Lemon Chiffon */
-      font-weight: 700;
-      font-size: 1.3rem;
+      color: #d4af37;
+      font-weight: 600;
+      font-size: 1.15rem;
       margin-top: 0.25rem;
-      letter-spacing: 0.04em;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      letter-spacing: 0.03em;
+      font-family: inherit;
     }
-
     section {
       margin-top: 2rem;
-      line-height: 1.7;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taaj The Techie 🌻</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Brush Script MT', cursive, 'Segoe Script', 'Comic Sans MS', cursive;
+      background: url('https://images.unsplash.com/photo-1505483531331-fc3cf89fd382?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #2f3e13;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      overflow-x: hidden;
+    }
+    .container {
+      background: rgba(255, 255, 255, 0.95);
+      max-width: 720px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      padding: 40px 40px 60px;
+      animation: fadeIn 1.2s ease forwards;
+      position: relative;
+      z-index: 1;
+      font-family: inherit; /* inherit cursive */
+    }
+    header {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    header h1 {
+      font-weight: 700;
+      font-size: 2.8rem;
+      color: #556b2f;
+      margin-bottom: 0.2rem;
+      letter-spacing: 0.05em;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: inherit; /* cursive */
+    }
+    header h1 .sunflower {
+      font-size: 2.8rem;
+      animation: spin 8s linear infinite;
+    }
+    header p.tagline {
+      font-style: italic;
+      color: #d4af37;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-top: 0.25rem;
+      letter-spacing: 0.03em;
+      font-family: inherit;
+    }
+    section {
+      margin-top: 2rem;
+      line-height: 1.65;
       font-weight: 400;
-      font-size: 1.25rem;
-      padding: 0 10px;
-      color: #f0e68c;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+      font-size: 1.15rem;
+      font-family: inherit;
     }
-
     section h2 {
-      color: #fffacd;
-      font-weight: 900;
-      font-size: 2rem;
+      color: #556b2f;
+      font-weight: 700;
+      font-size: 1.7rem;
       margin-bottom: 0.7rem;
-      border-bottom: 4px solid #f0e68c;
-      padding-bottom: 8px;
+      border-bottom: 3px solid #d4af37;
+      padding-bottom: 6px;
       max-width: max-content;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      font-family: inherit;
     }
-
     p {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.3rem;
+      color: #405521;
+      font-family: inherit;
     }
-
     a {
-      color: #f0e68c;
+      color: #d4af37;
       font-weight: 700;
       text-decoration: none;
       transition: color 0.3s ease;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      font-family: inherit;
     }
-
     a:hover {
-      color: #fffacd;
+      color: #556b2f;
       text-decoration: underline;
     }
-
     .sunflowers {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       margin-top: 2rem;
-      gap: 10px;
+      gap: 12px;
     }
-
     .sunflowers img {
-      height: 120px;
-      margin: 5px;
+      height: 100px;
       animation: floatUpDown 5s ease-in-out infinite;
       filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
     }
-
     @keyframes floatUpDown {
       0% { transform: translateY(0); }
       50% { transform: translateY(-10px); }
       100% { transform: translateY(0); }
     }
-
-    .footer {
-      margin-top: 3rem;
-      text-align: center;
-      font-size: 1rem;
-      color: #eee8aa; /* PaleGoldenRod */
-      font-style: italic;
-      user-select: none;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
-    }
-
     @keyframes fadeIn {
       from {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(30px);
       }
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
-
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #888a4f;
+      font-style: italic;
+      user-select: none;
+      font-family: inherit;
+    }
     @media (max-width: 768px) {
       body {
         padding: 20px 10px;
@@ -154,16 +215,16 @@
         padding: 30px 20px 40px;
       }
       header h1 {
-        font-size: 2.8rem;
+        font-size: 2rem;
+      }
+      header h1 .sunflower {
+        font-size: 2rem;
       }
       section h2 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
       section p {
-        font-size: 1.1rem;
-      }
-      .footer {
-        font-size: 0.9rem;
+        font-size: 1rem;
       }
       .sunflowers img {
         height: 80px;
@@ -174,7 +235,11 @@
 <body>
   <div class="container" role="main">
     <header>
-      <h1>Taaj The Techie 🌻</h1>
+      <h1>
+        <span class="sunflower" aria-hidden="true">🌻</span>
+        Taaj The Techie – Learning Cyber, Living Life
+        <span class="sunflower" aria-hidden="true">🌻</span>
+      </h1>
       <p class="tagline">Where sunflowers, security, and self-growth meet.</p>
     </header>
 
@@ -205,16 +270,16 @@
         This blog is just the beginning. I plan to build it up with more stories, tech wins, and reflections. Thanks for stopping by!
       </p>
       <p>
-        <strong>Let's connect with <a href="https://www.instagram.com/steamforme/" target="_blank" rel="noopener noreferrer">@STEAMforMe</a> and shoutout to The Knowledge House for all their support.</strong>
+        <strong>Let's connect with <a href="https://www.instagram.com/steamforme/" target="_blank" rel="noopener noreferrer">@STEAMforMe</a></strong>
       </p>
     </section>
 
     <div class="sunflowers">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_from_Silesia2.jpg" alt="Sunflower">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_from_Silesia2.jpg/800px-Sunflower_from_Silesia2.jpg" alt="Sunflower">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_sky_backdrop.jpg" alt="Sunflower">
       <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_from_Silesia2.jpg" alt="Sunflower">
       <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Sunflower_sky_backdrop.jpg" alt="Sunflower">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Sunflower_from_Silesia2.jpg" alt="Sunflower">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Sunflower_from_Silesia2.jpg/800px-Sunflower_from_Silesia2.jpg" alt="Sunflower">
     </div>
 
     <div class="footer">
