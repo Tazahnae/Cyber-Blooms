@@ -1,228 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
   <title>Taaj The Techie 🌻</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    /* Reset and base */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
     body {
-      font-family: 'Poppins', sans-serif;
-      /* Nature background: warm forest */
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
-      background-size: cover;
-      color: #556b2f; /* Olive green text */
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      padding: 40px 20px;
-      position: relative;
-      overflow-x: hidden;
+      background-color: #fdfaf3; /* soft earthy background */
+      color: #2e2e2e;
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.8;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      border: 3px solid #91b98b; /* green border */
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(145, 185, 139, 0.3);
     }
-    .container {
-      background: rgba(255, 255, 255, 0.95);
-      max-width: 720px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-      padding: 50px 50px 70px;
-      animation: fadeIn 1.2s ease forwards;
-      position: relative;
-      z-index: 1;
-      color: #556b2f;
+
+    h1 {
+      color: #5e8c61; /* your favorite green */
+      font-size: 2.5em;
     }
-    header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-      position: relative;
+
+    h2 {
+      color: #91b98b;
+      margin-top: 2em;
     }
-    header h1 {
-      font-weight: 900;
-      font-size: 4rem;
-      color: #d4af37; /* Gold */
-      margin-bottom: 0.3rem;
-      letter-spacing: 0.1em;
-      display: inline-flex;
-      align-items: center;
-      gap: 12px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-    }
-    header h1 .sunflower {
-      font-size: 4rem;
-      animation: spin 10s linear infinite;
-    }
-    header p.tagline {
-      font-style: italic;
-      color: #bdae4b; /* Muted yellow */
-      font-weight: 700;
-      font-size: 1.5rem;
-      margin-top: 0.35rem;
-      letter-spacing: 0.04em;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-    section {
-      margin-top: 2.5rem;
-      line-height: 1.75;
-      font-weight: 500;
-      font-size: 1.35rem;
-      padding: 0 12px;
-      color: #556b2f;
-      text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.85);
-    }
-    section h2 {
-      color: #d4af37;
-      font-weight: 900;
-      font-size: 2.3rem;
-      margin-bottom: 1rem;
-      border-bottom: 4px solid #bdae4b;
-      padding-bottom: 10px;
-      max-width: max-content;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
-    }
+
     p {
-      margin-bottom: 1.8rem;
+      font-size: 1.1em;
     }
+
+    .sunflower {
+      font-size: 2em;
+    }
+
+    footer {
+      margin-top: 3em;
+      font-size: 0.9em;
+      text-align: center;
+      color: #5a5a5a;
+    }
+
     a {
-      color: #d4af37;
-      font-weight: 700;
+      color: #5e8c61;
       text-decoration: none;
-      transition: color 0.3s ease;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
     }
+
     a:hover {
-      color: #556b2f;
       text-decoration: underline;
     }
-    /* Sunflower floating images */
-    .sunflower-float {
-      position: absolute;
-      width: 100px;
-      z-index: 0;
-      animation: floatUpDown 6s ease-in-out infinite;
-      filter: drop-shadow(1.5px 1.5px 2.5px rgba(0,0,0,0.25));
-      user-select: none;
-    }
-    .sunflower-float:nth-child(1) { top: 40px; left: 6%; animation-delay: 0s; }
-    .sunflower-float:nth-child(2) { top: 140px; right: 8%; animation-delay: 2s; }
-    .sunflower-float:nth-child(3) { bottom: 80px; left: 15%; animation-delay: 4s; }
-    .sunflower-float:nth-child(4) { bottom: 100px; right: 20%; animation-delay: 6s; }
-    .sunflower-float:nth-child(5) { top: 220px; left: 30%; animation-delay: 1s; }
-    .sunflower-float:nth-child(6) { top: 180px; right: 30%; animation-delay: 3s; }
-    .sunflower-float:nth-child(7) { bottom: 40px; left: 35%; animation-delay: 5s; }
 
-    @keyframes floatUpDown {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    @keyframes spin {
-      from {
-        transform: rotate(0deg);
-      }
-      to {
-        transform: rotate(360deg);
-      }
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      body {
-        padding: 20px 10px;
-      }
-      .container {
-        padding: 30px 20px 40px;
-        max-width: 90vw;
-      }
-      header h1 {
-        font-size: 2.8rem;
-      }
-      header h1 .sunflower {
-        font-size: 2.8rem;
-      }
-      header p.tagline {
-        font-size: 1.1rem;
-      }
-      section h2 {
-        font-size: 1.6rem;
-      }
-      section {
-        font-size: 1.1rem;
-        padding: 0 8px;
-      }
+    .center {
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <!-- Floating sunflowers -->
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-  <img src="https://i.imgur.com/JtGz3Mi.png" alt="Sunflower" class="sunflower-float" />
-
-  <div class="container" role="main">
-    <header>
-      <h1>
-        <span class="sunflower" aria-hidden="true">🌻</span>
-        Taaj The Techie – Learning Cyber, Living Life
-        <span class="sunflower" aria-hidden="true">🌻</span>
-      </h1>
-      <p class="tagline">Where sunflowers, security, and self-growth meet.</p>
-    </header>
-
-    <section>
-      <h2>Hey, I’m Taaj!</h2>
-      <p>
-        I'm a young Black woman on a journey into the world of cybersecurity, learning on my Mac Silicon. This blog is a fun personal space where I document little pieces of my growth as I explore tech and life.
-      </p>
-    </section>
-
-    <section>
-      <h2>Creative Side</h2>
-      <p>
-        I love arts and crafts, painting, and still believe in the joy of flipping through physical books. Museums and hiking help keep me grounded and sane in a busy world.
-      </p>
-    </section>
-
-    <section>
-      <h2>My Favorite Title: Mom</h2>
-      <p>
-        I’m a proud mom to a wonderful family. 💛
-      </p>
-    </section>
-
-    <section>
-      <h2>What’s Next?</h2>
-      <p>
-        This blog is just the beginning. I plan to build it up with more stories, tech wins, and reflections. Thanks for stopping by!
-      </p>
-      <p>
-        <strong>Let's connect with <a href="https://www.instagram.com/steamforme/" target="_blank" rel="noopener noreferrer">@STEAMforMe</a></strong>
-      </p>
-    </section>
-
-    <div class="footer">
-      &copy; 2025 Taaj Matthews | Built with 💻 & 🌻
-    </div>
+  <div class="center">
+    <h1>🌻 Taaj The Techie – Learning Cyber, Living Life</h1>
+    <p><em>Where sunflowers, security, and self-growth meet.</em></p>
   </div>
+
+  <h2>Hey, I’m Taaj!</h2>
+  <p>I'm a young Black woman on a journey into the world of cybersecurity, learning on my Mac Silicon. This blog is a fun personal space where I document little pieces of my growth as I explore tech and life.</p>
+
+  <h2>Creative Side</h2>
+  <p>I love arts and crafts, painting, and still believe in the joy of flipping through physical books. Museums and hiking help keep me grounded and sane in a busy world.</p>
+
+  <h2>My Favorite Title: Mom</h2>
+  <p>I’m a proud mom to a wonderful family. 💛</p>
+
+  <h2>What’s Next?</h2>
+  <p>This blog is just the beginning. I plan to build it up with more stories, tech wins, and reflections. Thanks for stopping by!</p>
+
+  <p>Let's connect at <a href="https://steamforme.org" target="_blank">@STEAMforMe.org</a></p>
+
+  <footer>
+    © 2025 TaZahnae  Matthews | Built with 💻 & 🌻 and a touch of green 💚
+  </footer>
 
 </body>
 </html>
+
