@@ -1,107 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cyber Blooms</title>
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tazahnae Matthews – Cybersecurity Portfolio</title>
+  <meta name="description" content="Cybersecurity projects, labs, and writing by Tazahnae Matthews. Where sunflowers, security, and self-growth meet." />
+  <meta property="og:title" content="Tazahnae Matthews – Cybersecurity Portfolio" />
+  <meta property="og:description" content="Cybersecurity projects, labs, and writing by Tazahnae Matthews." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#fefefe" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #708238 30%, #f3de61 65%, #f28c28 90%);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 40px 20px;
-    }
-
-    .center {
-      text-align: center;
-      max-width: 900px;
-      background-color: rgba(255, 255, 255, 0.85);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 30px;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .flower-field {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    a {
-      color: #f28c28;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #444;
-      text-align: center;
-    }
+    :root{ --olive:#1b3a2f; --forest:#0f241d; --sun:#f3c614; }
+    body { color: black; }
+    .sunflower{ background: radial-gradient(circle at 30% 20%, #ffe892 0 10%, transparent 10%),
+                 radial-gradient(circle at 70% 30%, #ffe37a 0 8%, transparent 8%),
+                 linear-gradient(120deg, #fef7ce, #fff5b3 40%, #ffd95a); }
+    .card{ border-radius: 1.25rem; }
   </style>
+  <script>
+    const PROJECTS = [
+      {
+        title: "AWS Cybersecurity Training Range (Sec_Lab)",
+        tag: "Capstone",
+        blurb: "Hands-on blue/red team lab with GuardDuty, Security Hub, CloudTrail, and incident playbooks.",
+        links: [{label:"Repo", href:"https://github.com/Tazahnae"},{label:"Overview", href:"#"}]
+      },
+      {
+        title: "Taaj’s Chatty Bot (CLI)",
+        tag: "Python",
+        blurb: "Beginner-friendly chatbot that runs on Kali VM: greetings, time/date, jokes, math, notes, weather (no API key).",
+        links: [{label:"Repo", href:"https://github.com/Tazahnae/Tazahnae-s-Chatty-bot"}]
+      },
+      {
+        title: "Cyber Blooms Blog",
+        tag: "Writing",
+        blurb: "Short posts capturing wins, hurdles, and study tips across Security+, Bash, and AWS.",
+        links: [{label:"Visit", href:"https://tazahnae.github.io/Cyber-Blooms/"}]
+      }
+    ];
+
+    const CERTS = [
+      { title:"Security+ (in progress)", year:"2025", note:"Daily drills + weekend labs" },
+      { title:"AWS Cloud Practitioner (planned)", year:"2026" }
+    ];
+
+    const SKILLS = [
+      "Linux & Bash", "Python scripting", "GitHub & Actions", "AWS basics",
+      "Networking & subnets", "Incident notes & playbooks", "Jekyll/GitHub Pages"
+    ];
+  </script>
 </head>
-<body>
+<body class="min-h-screen bg-white selection:bg-yellow-200/60 selection:text-black">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/10">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="font-semibold tracking-wide text-black">Tazahnae Matthews</a>
+      <nav class="flex items-center gap-4 text-sm">
+        <a href="#projects" class="hover:underline">Projects</a>
+        <a href="#skills" class="hover:underline">Skills</a>
+        <a href="#certs" class="hover:underline">Certs</a>
+        <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-black/20 px-4 py-1.5 hover:bg-black/10">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="center">
-    <h1>🌻 Taaj The Techie – Learning Cyber, Living Life</h1>
-    <p><em>Where sunflowers, security, and self-growth meet.</em></p>
-  </div>
+  <section id="top" class="sunflower">
+    <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24 grid gap-10 md:grid-cols-2 items-center">
+      <div>
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-black leading-tight">
+          Where sunflowers, <span class="text-[var(--forest)]">security</span>, and self-growth meet 🌻
+        </h1>
+        <p class="mt-5 text-black/90 max-w-prose">
+          Welcome to my professional cybersecurity portfolio! I’m <strong>Tazahnae Matthews</strong>, a passionate learner exploring the intersection of technology, security, and community. This space highlights my journey through cybersecurity labs, projects, and personal growth.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a class="px-4 py-2 rounded-full bg-black text-white hover:opacity-90" href="#projects">Explore My Work</a>
+          <a class="px-4 py-2 rounded-full border border-black text-black hover:bg-black hover:text-white" href="https://github.com/Tazahnae" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="px-4 py-2 rounded-full border border-black text-black hover:bg-black hover:text-white" href="https://www.linkedin.com/in/INSERT-YOUR-HANDLE" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <div class="flower-field">
-    🌻 🌸 🌼 🌺 💐 🌷 🌻 🌼 🌸 🌺 💐 🌻
-  </div>
+  <section id="projects" class="py-16 bg-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Featured Projects & Labs</h2>
+      <div id="project-grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
 
-  <h2>Hey, I’m Taaj!</h2>
-  <p>
-    I'm a young Black woman boldly navigating the dynamic world of cybersecurity, all while learning and experimenting on my powerful Mac Silicon. This blog is my personal space to share every step of my journey—from breakthroughs and challenges to tips, tutorials, and reflections. Here, I celebrate my growth, document my wins, and connect with others who are passionate about tech, learning, and self-empowerment. Join me as I turn curiosity into skills and dreams into reality!
-  </p>
+  <section id="skills" class="py-14 bg-yellow-50 border-y border-black/10">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Core Skills</h2>
+      <ul id="skills-list" class="mt-6 flex flex-wrap gap-3"></ul>
+    </div>
+  </section>
 
-  <h2>Creative Side</h2>
-  <p>I love arts and crafts, painting, and still believe in the joy of flipping through physical books. Museums and hiking help keep me grounded and sane.</p>
-
-  <h2>My Favorite Title: Mom</h2>
-  <p>I’m a proud mom to a wonderful family. 💛</p>
-
-  <h2>What’s Next?</h2>
-  <p>This blog is just the beginning. I plan to build it up with more stories, tech wins, and reflections. Thanks for stopping by!</p>
-
-  <p>Let's connect at <a href="https://steamforme.org" target="_blank">@STEAMforMe.org</a></p>
-
-  <footer>
-    © 2025 TaZahnae Matthews |  💚
-  </footer>
-
-</body>
-</html>
+  <section id="certs" class="py-14 bg-white">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Certifications</h2>
+      <ul id="cert-list" class="mt-6 grid sm:gri
