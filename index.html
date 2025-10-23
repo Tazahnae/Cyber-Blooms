@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tazahnae Matthews – Cybersecurity Portfolio</title>
-  <meta name="description" content="Cybersecurity projects, labs, and writing by Tazahnae Matthews. Where sunflowers, security, and self-growth meet." />
+  <meta name="description" content="Cybersecurity projects, skills, and certifications by Tazahnae Matthews. Where sunflowers, security, and self-growth meet." />
   <meta property="og:title" content="Tazahnae Matthews – Cybersecurity Portfolio" />
-  <meta property="og:description" content="Cybersecurity projects, labs, and writing by Tazahnae Matthews." />
+  <meta property="og:description" content="Cybersecurity projects, skills, and certifications by Tazahnae Matthews." />
   <meta property="og:type" content="website" />
   <meta name="theme-color" content="#fefefe" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -24,12 +24,12 @@
         title: "AWS Cybersecurity Training Range (Sec_Lab)",
         tag: "Capstone",
         blurb: "Hands-on blue/red team lab with GuardDuty, Security Hub, CloudTrail, and incident playbooks.",
-        links: [{label:"Repo", href:"https://github.com/Tazahnae"},{label:"Overview", href:"#"}]
+        links: [{label:"Repo", href:"https://github.com/Tazahnae/Sec_Lab"},{label:"Overview", href:"#"}]
       },
       {
         title: "Taaj’s Chatty Bot (CLI)",
         tag: "Python",
-        blurb: "Beginner-friendly chatbot that runs on Kali VM: greetings, time/date, jokes, math, notes, weather (no API key).",
+        blurb: "Beginner-friendly chatbot that runs on Kali VM: greetings, time/date, jokes, math, notes, and weather (no API key).",
         links: [{label:"Repo", href:"https://github.com/Tazahnae/Tazahnae-s-Chatty-bot"}]
       },
       {
@@ -37,17 +37,41 @@
         tag: "Writing",
         blurb: "Short posts capturing wins, hurdles, and study tips across Security+, Bash, and AWS.",
         links: [{label:"Visit", href:"https://tazahnae.github.io/Cyber-Blooms/"}]
+      },
+      {
+        title: "STEAM for ME Sandbox",
+        tag: "Education",
+        blurb: "Interactive coding curriculum built for 6th–8th graders combining GitHub, Bash scripting, and real-world STEAM lessons.",
+        links: [{label:"Repo", href:"https://github.com/Tazahnae/STEAM-for-ME-Sandbox"}]
       }
     ];
 
     const CERTS = [
-      { title:"Security+ (in progress)", year:"2025", note:"Daily drills + weekend labs" },
-      { title:"AWS Cloud Practitioner (planned)", year:"2026" }
+      { title:"CompTIA Security+ (Planned)", year:"2025", note:"Focused on mastering core cybersecurity concepts, networking, and threat detection." },
+      { title:"AWS Cloud Practitioner (Planned)", year:"2026", note:"Foundational cloud security and infrastructure knowledge." }
     ];
 
     const SKILLS = [
-      "Linux & Bash", "Python scripting", "GitHub & Actions", "AWS basics",
-      "Networking & subnets", "Incident notes & playbooks", "Jekyll/GitHub Pages"
+      {
+        name: "Linux & Bash",
+        desc: "Experienced using Linux environments for scripting, automation, and security testing."
+      },
+      {
+        name: "Python Scripting",
+        desc: "Building command-line tools, automations, and cybersecurity labs for practical use."
+      },
+      {
+        name: "Networking & Security Fundamentals",
+        desc: "Understanding subnets, ports, protocols, and network monitoring tools."
+      },
+      {
+        name: "AWS Cloud Security",
+        desc: "Deploying secure cloud infrastructure, GuardDuty alerts, and IAM roles using Terraform."
+      },
+      {
+        name: "GitHub & Version Control",
+        desc: "Managing repositories, actions, and collaborative projects for code tracking and automation."
+      }
     ];
   </script>
 </head>
@@ -71,7 +95,7 @@
           Where sunflowers, <span class="text-[var(--forest)]">security</span>, and self-growth meet 🌻
         </h1>
         <p class="mt-5 text-black/90 max-w-prose">
-          Welcome to my professional cybersecurity portfolio! I’m <strong>Tazahnae Matthews</strong>, a passionate learner exploring the intersection of technology, security, and community. This space highlights my journey through cybersecurity labs, projects, and personal growth.
+          Welcome to my professional cybersecurity portfolio! I’m <strong>Tazahnae Matthews</strong>, a passionate learner exploring the intersection of technology, security, and community. Here, you’ll find my featured projects, certifications, and skills that showcase my growth in cybersecurity.
         </p>
         <div class="mt-6 flex flex-wrap gap-3">
           <a class="px-4 py-2 rounded-full bg-black text-white hover:opacity-90" href="#projects">Explore My Work</a>
@@ -85,6 +109,7 @@
   <section id="projects" class="py-16 bg-white">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-2xl sm:text-3xl font-bold">Featured Projects & Labs</h2>
+      <p class="mt-3 text-black/80">These projects reflect my hands-on learning and practical cybersecurity experience—from automating cloud security labs to teaching STEAM students how to code securely.</p>
       <div id="project-grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </div>
   </section>
@@ -92,11 +117,74 @@
   <section id="skills" class="py-14 bg-yellow-50 border-y border-black/10">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-2xl sm:text-3xl font-bold">Core Skills</h2>
-      <ul id="skills-list" class="mt-6 flex flex-wrap gap-3"></ul>
+      <p class="mt-3 text-black/80">My core skills center around building secure systems, coding efficiently, and understanding cybersecurity from both practical and theoretical perspectives.</p>
+      <ul id="skills-list" class="mt-6 grid sm:grid-cols-2 gap-4"></ul>
     </div>
   </section>
 
   <section id="certs" class="py-14 bg-white">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="text-2xl sm:text-3xl font-bold">Certifications</h2>
-      <ul id="cert-list" class="mt-6 grid sm:gri
+      <ul id="cert-list" class="mt-6 grid sm:grid-cols-2 gap-4"></ul>
+    </div>
+  </section>
+
+  <section id="contact" class="py-16 bg-yellow-50">
+    <div class="mx-auto max-w-6xl px-4">
+      <h2 class="text-2xl sm:text-3xl font-bold">Get in Touch</h2>
+      <p class="mt-3 text-black/90">Interested in collaborating, networking, or learning more about my work? Feel free to reach out.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a class="px-4 py-2 rounded-full bg-black text-white font-semibold hover:opacity-90" href="mailto:contact@steamforme.org">Email</a>
+        <a class="px-4 py-2 rounded-full border border-black hover:bg-black hover:text-white" href="https://www.linkedin.com/in/INSERT-YOUR-HANDLE" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="px-4 py-2 rounded-full border border-black hover:bg-black hover:text-white" href="https://github.com/Tazahnae" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-8 border-t border-black/10 bg-white">
+    <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-black/70">© <span id="year"></span> Tazahnae Matthews • Built on GitHub Pages</p>
+      <div class="flex items-center gap-4 text-sm">
+        <a class="hover:underline" href="https://tazahnae.github.io/Cyber-Blooms/">Blog</a>
+        <a class="hover:underline" href="https://github.com/Tazahnae">GitHub</a>
+        <a class="hover:underline" href="https://www.linkedin.com/in/INSERT-YOUR-HANDLE">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const grid = document.getElementById('project-grid');
+    PROJECTS.forEach(p => {
+      const card = document.createElement('article');
+      card.className = 'card bg-yellow-50 border border-black/10 p-5 flex flex-col gap-3';
+      card.innerHTML = `
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold">${p.title}</h3>
+          <span class="text-xs px-2 py-1 rounded-full bg-black/5 border border-black/10">${p.tag}</span>
+        </div>
+        <p class="text-sm text-black/80">${p.blurb}</p>
+        <div class="mt-auto flex flex-wrap gap-3">${p.links.map(l=>`<a class='text-sm underline' target='_blank' rel='noreferrer' href='${l.href}'>${l.label} →</a>`).join('')}</div>
+      `;
+      grid.appendChild(card);
+    });
+
+    const skills = document.getElementById('skills-list');
+    SKILLS.forEach(s => {
+      const card = document.createElement('div');
+      card.className = 'card bg-white border border-black/10 p-4';
+      card.innerHTML = `<strong>${s.name}</strong><p class='text-sm mt-2 text-black/80'>${s.desc}</p>`;
+      skills.appendChild(card);
+    });
+
+    const certList = document.getElementById('cert-list');
+    CERTS.forEach(c => {
+      const li = document.createElement('li');
+      li.className = 'card bg-yellow-50 border border-black/10 p-4';
+      li.innerHTML = `<div class='flex items-center justify-between'><strong>${c.title}</strong><span class='text-sm text-black/70'>${c.year}</span></div><p class='text-sm text-black/80 mt-2'>${c.note||''}</p>`;
+      certList.appendChild(li);
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
