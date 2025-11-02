@@ -78,6 +78,17 @@ GitHub-based sandbox for Newark 6th–7th graders, introducing core STEAM skills
 | **Cisco Networking Academy** | Networking Basics | Apr 2025 |
 
 🎓 **Full Badge Collection:** [Credly Profile →](https://www.credly.com/users/tazahnae-matthews)  
+
+## 🔒 Completed TryHackMe Rooms  
+
+| Room Name | Focus Area | Completion Date |
+|------------|-------------|-----------------|
+| Introduction to Cyber Security | Fundamentals | 2025-09-10 |
+| Network Fundamentals | Networking | 2025-09-12 |
+| Pre-Security | Security Basics | 2025-09-15 |
+| OWASP Top 10 | Web Security | 2025-10-03 |
+| Linux Fundamentals 1 | Linux | 2025-10-10 |
+| Blue Team Basics | Defense | 2025-10-20 |
 🧩 **TryHackMe Labs:** [View Completed Rooms →](https://tryhackme.com/p/matthewstaaj?tab=completed-rooms)
 
 ---
