@@ -1,190 +1,636 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Tazahnae Matthews – Cybersecurity Portfolio</title>
-  <meta name="description" content="Cybersecurity projects, skills, and certifications by Tazahnae Matthews. Where sunflowers, security, and self-growth meet." />
-  <meta property="og:title" content="Tazahnae Matthews – Cybersecurity Portfolio" />
-  <meta property="og:description" content="Cybersecurity projects, skills, and certifications by Tazahnae Matthews." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#fefefe" />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <meta
+    name="description"
+    content="Cybersecurity in Bloom — immersive cybersecurity portfolio for Tazahnae Matthews"
+  />
+  <title>🌻 Cybersecurity in Bloom — Tazahnae Matthews</title>
+
+  <!-- Fonts & Icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/feather-icons"></script>
+
   <style>
-    :root{ --olive:#1b3a2f; --forest:#0f241d; --sun:#f3c614; }
-    body { color: black; }
-    .sunflower{ background: radial-gradient(circle at 30% 20%, #ffe892 0 10%, transparent 10%),
-                 radial-gradient(circle at 70% 30%, #ffe37a 0 8%, transparent 8%),
-                 linear-gradient(120deg, #fef7ce, #fff5b3 40%, #ffd95a); }
-    .card{ border-radius: 1.25rem; }
+    :root {
+      --sunflower: #ffc512;
+      --cosmos: #0b132b;
+      --nebula: #1c2541;
+      --orbit: #3a506b;
+      --starlight: #5bc0be;
+      --ink: rgba(245, 255, 255, 0.85);
+      font-family: "Inter", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, rgba(255, 197, 18, 0.12), #0b132b 62%);
+      color: var(--ink);
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.9rem 1.5rem;
+      background: rgba(11, 19, 43, 0.95);
+      backdrop-filter: blur(7px);
+      border-bottom: 1px solid rgba(91, 192, 190, 0.15);
+    }
+    .brand {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+    .brand-badge {
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(255, 197, 18, 0.9), rgba(255, 197, 18, 0));
+      display: grid;
+      place-items: center;
+      color: #0b132b;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+    }
+    nav a {
+      margin-left: 1rem;
+      color: rgba(245, 255, 255, 0.85);
+      text-decoration: none;
+      font-size: 0.86rem;
+      transition: 0.2s ease;
+    }
+    nav a:hover {
+      color: var(--sunflower);
+    }
+
+    /* HERO */
+    .hero-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero {
+      text-align: left;
+      padding: 4.5rem 1.5rem 4rem;
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 2.4rem;
+      align-items: center;
+    }
+    .hero-left {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 4.3vw, 3.25rem);
+      color: var(--sunflower);
+      line-height: 1.02;
+      margin-bottom: 1rem;
+    }
+    .hero-sub {
+      max-width: 580px;
+      color: rgba(225, 255, 255, 0.85);
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn-primary {
+      background: var(--sunflower);
+      color: #0b132b;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      gap: 0.35rem;
+      align-items: center;
+      box-shadow: 0 14px 26px rgba(255, 197, 18, 0.15);
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      filter: brightness(1.08);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(91, 192, 190, 0.2);
+      color: #fff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 999px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* HERO RIGHT VISUAL */
+    .hero-right {
+      position: relative;
+    }
+    .floating-panel {
+      background: radial-gradient(circle, rgba(12, 21, 45, 0.4), rgba(11, 19, 43, 0.1));
+      border: 1px solid rgba(91, 192, 190, 0.2);
+      border-radius: 1.35rem;
+      padding: 1.1rem 1.2rem;
+      backdrop-filter: blur(4px);
+      margin-bottom: 1rem;
+    }
+    .floating-title {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: rgba(245, 255, 255, 0.5);
+    }
+    .floating-value {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .hero-badge-stack {
+      display: grid;
+      gap: 1rem;
+    }
+    .pulse {
+      animation: pulse 3s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255, 197, 18, 0.25); }
+      100% { box-shadow: 0 0 0 20px rgba(255, 197, 18, 0); }
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3.2rem 1.25rem 3.1rem;
+    }
+    .section-title {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+      color: var(--sunflower);
+      font-size: 1.4rem;
+      margin-bottom: 1.4rem;
+    }
+
+    /* ABOUT */
+    .about-box {
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(91, 192, 190, 0.12);
+      border-radius: 1.1rem;
+      padding: 1.3rem 1.4rem 1.1rem;
+      line-height: 1.65;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+      gap: 1.25rem;
+    }
+    .card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .card {
+      background: radial-gradient(circle at top, rgba(12, 21, 45, 0.45), rgba(11, 19, 43, 0.02));
+      border: 1px solid rgba(91, 192, 190, 0.12);
+      border-radius: 1rem;
+      padding: 1rem 1.05rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      transition: transform 0.25s ease, border 0.25s ease;
+      height: 100%;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      border: 1px solid rgba(255, 197, 18, 0.28);
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(255, 197, 18, 0.12);
+      border: 1px solid rgba(255, 197, 18, 0.4);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--sunflower);
+      width: fit-content;
+    }
+    .inline-link {
+      color: var(--sunflower);
+      text-decoration: none;
+      font-size: 0.798rem;
+    }
+    .inline-link:hover {
+      text-decoration: underline;
+    }
+
+    /* LEARNING / CURRENTLY BUILDING */
+    .learning-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
+      gap: 1.1rem;
+    }
+    .panel {
+      background: rgba(12, 21, 45, 0.35);
+      border: 1px solid rgba(91, 192, 190, 0.08);
+      border-radius: 1rem;
+      padding: 1.05rem 1.05rem;
+    }
+
+    /* CASE STUDY */
+    .case-study {
+      background: radial-gradient(circle, rgba(255, 197, 18, 0.03), rgba(11, 19, 43, 0.9));
+      border: 1px solid rgba(255, 197, 18, 0.18);
+      border-radius: 1.1rem;
+      padding: 1.3rem 1.25rem;
+      line-height: 1.6;
+    }
+    .case-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .case-meta {
+      font-size: 0.78rem;
+      opacity: 0.6;
+      margin-bottom: 0.5rem;
+    }
+    .case-bullets li {
+      margin-bottom: 0.35rem;
+    }
+
+    /* CONTACT */
+    form {
+      max-width: 520px;
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+    input,
+    textarea {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(91, 192, 190, 0.18);
+      border-radius: 0.7rem;
+      padding: 0.6rem 0.6rem;
+      color: #fff;
+      font-family: inherit;
+    }
+    input:focus,
+    textarea:focus {
+      outline: 1px solid rgba(255, 197, 18, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.6rem 0 2rem;
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.8rem;
+    }
+
+    /* IMMERSIVE FX */
+    .glow-orb {
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      background: radial-gradient(circle, rgba(255, 197, 18, 0.3), rgba(255, 197, 18, 0));
+      filter: blur(30px);
+      z-index: 1;
+    }
+    .orb-1 {
+      top: -40px;
+      right: -120px;
+    }
+    .orb-2 {
+      bottom: -140px;
+      left: -80px;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: left;
+      }
+      .hero-actions {
+        justify-content: flex-start;
+      }
+      nav a {
+        display: none;
+      }
+    }
   </style>
-  <script>
-    const PROJECTS = [
-      {
-        title: "AWS Cybersecurity Training Range (Sec_Lab)",
-        tag: "Capstone",
-        blurb: "Hands-on blue/red team lab with GuardDuty, Security Hub, CloudTrail, and incident playbooks.",
-        links: [{label:"Repo", href:"https://github.com/Tazahnae/Sec_Lab"},{label:"Overview", href:"#"}]
-      },
-      {
-        title: "Taaj’s Chatty Bot (CLI)",
-        tag: "Python",
-        blurb: "Beginner-friendly chatbot that runs on Kali VM: greetings, time/date, jokes, math, notes, and weather (no API key).",
-        links: [{label:"Repo", href:"https://github.com/Tazahnae/Tazahnae-s-Chatty-bot"}]
-      },
-      {
-        title: "Cyber Blooms Blog",
-        tag: "Writing",
-        blurb: "Short posts capturing wins, hurdles, and study tips across Security+, Bash, and AWS.",
-        links: [{label:"Visit", href:"https://tazahnae.github.io/Cyber-Blooms/"}]
-      },
-      {
-        title: "STEAM for ME Sandbox",
-        tag: "Education",
-        blurb: "Interactive coding curriculum built for 6th–8th graders combining GitHub, Bash scripting, and real-world STEAM lessons.",
-        links: [{label:"Repo", href:"https://github.com/Tazahnae/STEAM-for-ME-Sandbox"}]
-      }
-    ];
-
-    const CERTS = [
-      { title:"CompTIA Security+ (Planned)", year:"2025", note:"Focused on mastering core cybersecurity concepts, networking, and threat detection." },
-      { title:"AWS Cloud Practitioner (Planned)", year:"2026", note:"Foundational cloud security and infrastructure knowledge." }
-    ];
-
-    const SKILLS = [
-      {
-        name: "Linux & Bash",
-        desc: "Experienced using Linux environments for scripting, automation, and security testing."
-      },
-      {
-        name: "Python Scripting",
-        desc: "Building command-line tools, automations, and cybersecurity labs for practical use."
-      },
-      {
-        name: "Networking & Security Fundamentals",
-        desc: "Understanding subnets, ports, protocols, and network monitoring tools."
-      },
-      {
-        name: "AWS Cloud Security",
-        desc: "Deploying secure cloud infrastructure, GuardDuty alerts, and IAM roles using Terraform."
-      },
-      {
-        name: "GitHub & Version Control",
-        desc: "Managing repositories, actions, and collaborative projects for code tracking and automation."
-      }
-    ];
-  </script>
 </head>
-<body class="min-h-screen bg-white selection:bg-yellow-200/60 selection:text-black">
-  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-black/10">
-    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
-      <a href="#top" class="font-semibold tracking-wide text-black">Tazahnae Matthews</a>
-      <nav class="flex items-center gap-4 text-sm">
-        <a href="#projects" class="hover:underline">Projects</a>
-        <a href="#skills" class="hover:underline">Skills</a>
-        <a href="#certs" class="hover:underline">Certs</a>
-        <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-black/20 px-4 py-1.5 hover:bg-black/10">Contact</a>
-      </nav>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="brand">
+      <div class="brand-badge" aria-label="sunflower icon">🌻</div>
+      <div>
+        <h1>Cybersecurity in Bloom</h1>
+        <small style="opacity:.6;font-size:.7rem;">by Tazahnae Matthews</small>
+      </div>
     </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#work">Projects</a>
+      <a href="#learning">In Progress</a>
+      <a href="#case-study">Case Study</a>
+      <a href="#connect">Connect</a>
+      <a href="https://www.linkedin.com/in/tazahnae-matthews-347124190" target="_blank" rel="noreferrer">LinkedIn</a>
+    </nav>
   </header>
 
-  <section id="top" class="sunflower">
-    <div class="mx-auto max-w-6xl px-4 py-16 sm:py-24 grid gap-10 md:grid-cols-2 items-center">
-      <div>
-        <h1 class="text-3xl sm:text-5xl font-extrabold text-black leading-tight">
-          Where sunflowers, <span class="text-[var(--forest)]">security</span>, and self-growth meet 🌻
-        </h1>
-        <p class="mt-5 text-black/90 max-w-prose">
-          Welcome to my professional cybersecurity portfolio! I’m <strong>Tazahnae Matthews</strong>, a passionate learner exploring the intersection of technology, security, and community. Here, you’ll find my featured projects, certifications, and skills that showcase my growth in cybersecurity.
+  <!-- HERO -->
+  <div class="hero-wrap" id="top">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2 class="hero-title">Security, cloud labs, and STEAM — growing together.</h2>
+        <p class="hero-sub">
+          I’m <strong>Tazahnae Matthews</strong>, a 2025 cybersecurity learner and program manager from Newark.
+          I build AWS security labs, run virtual machines on an M1 Mac, and design GitHub-based STEAM curriculum
+          for middle schoolers — all while working toward <strong>CompTIA Security+ (2025)</strong>.
         </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <a class="px-4 py-2 rounded-full bg-black text-white hover:opacity-90" href="#projects">Explore My Work</a>
-          <a class="px-4 py-2 rounded-full border border-black text-black hover:bg-black hover:text-white" href="https://github.com/Tazahnae" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="px-4 py-2 rounded-full border border-black text-black hover:bg-black hover:text-white" href="https://www.linkedin.com/in/INSERT-YOUR-HANDLE" target="_blank" rel="noreferrer">LinkedIn</a>
+        <div class="hero-actions">
+          <a href="#work" class="btn-primary">
+            View Featured Work
+            <i data-feather="arrow-right" style="width:16px;height:16px;"></i>
+          </a>
+          <a href="https://github.com/Tazahnae" target="_blank" rel="noreferrer" class="btn-secondary">
+            GitHub Profile
+            <i data-feather="github" style="width:16px;height:16px;"></i>
+          </a>
+          <a href="https://tazahnae.github.io/my-portfolio/" target="_blank" rel="noreferrer" class="btn-secondary">
+            Résumé
+            <i data-feather="file-text" style="width:16px;height:16px;"></i>
+          </a>
+        </div>
+        <p style="opacity:.55;font-size:.75rem;">
+          *Built for TKH Cybersecurity Portfolio rubric — includes projects, skills, learning plan, and case study.
+        </p>
+      </div>
+      <div class="hero-right">
+        <div class="hero-badge-stack">
+          <div class="floating-panel pulse">
+            <div class="floating-title">Current Track</div>
+            <div class="floating-value">TKH Cybersecurity & Innovation Fellowship ‘25</div>
+            <p style="font-size:.68rem;opacity:.7;">Security+, AWS, TryHackMe, program management</p>
+          </div>
+          <div class="floating-panel">
+            <div class="floating-title">Labs Built On</div>
+            <div class="floating-value">UTM on M1 Mac</div>
+            <p style="font-size:.68rem;opacity:.7;">Kali • Metasploitable 2 • Windows Server 2022</p>
+          </div>
+          <div class="floating-panel">
+            <div class="floating-title">2025 Goal</div>
+            <div class="floating-value">Entry-level SOC / IT Support</div>
+            <p style="font-size:.68rem;opacity:.7;">Security+ → SOC1 → Cloud Security</p>
+          </div>
         </div>
       </div>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="section-title">
+      <i data-feather="user"></i>
+      <span>About Me</span>
+    </div>
+    <div class="about-box">
+      I’m <strong>Tazahnae “Taaj” Matthews</strong>, a cybersecurity learner who loves to document the process —
+      not just the results. I focus on <strong>cloud security (AWS)</strong>, <strong>virtual lab building</strong>,
+      and <strong>teaching youth in Newark</strong> through <strong>STEAM for Me</strong>.
+      In 2025, I’m sitting for <strong>CompTIA Security+</strong> and applying to security-adjacent roles like
+      <strong>SOC Analyst (Tier 1)</strong> or <strong>IT Support with a security track</strong>.
+      <br /><br />
+      I care about: making cybersecurity <em>easy to explain</em>, writing READMEs, and building labs that anyone
+      on my team can re-run.
     </div>
   </section>
 
-  <section id="projects" class="py-16 bg-white">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl sm:text-3xl font-bold">Featured Projects & Labs</h2>
-      <p class="mt-3 text-black/80">These projects reflect my hands-on learning and practical cybersecurity experience—from automating cloud security labs to teaching STEAM students how to code securely.</p>
-      <div id="project-grid" class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  <!-- FEATURED WORK -->
+  <section class="section" id="work">
+    <div class="section-title">
+      <i data-feather="folder"></i>
+      <span>Featured Work</span>
+    </div>
+    <div class="projects-grid">
+      <!-- project 1 -->
+      <a class="card-link" href="https://github.com/Tazahnae/aws_auth_grc" target="_blank" rel="noreferrer">
+        <article class="card">
+          <span class="tag">AWS • Terraform • Security</span>
+          <h3 style="margin:.3rem 0 .35rem 0;">AWS Passwordless Authentication & SOC Simulation</h3>
+          <p style="margin:0 0 .75rem 0;">
+            IAM & Security lead on a team build. Cognito (WebAuthn), MFA, plus Security Hub, GuardDuty, CloudTrail and Config for monitoring.
+          </p>
+          <p style="margin:0 0 .5rem 0;"><strong>Role:</strong> IAM & Security Lead</p>
+          <span class="inline-link">View repo ↗</span>
+        </article>
+      </a>
+
+      <!-- project 2 -->
+      <a class="card-link" href="https://tazahnae.github.io/Cyber-Blooms/" target="_blank" rel="noreferrer">
+        <article class="card">
+          <span class="tag">EdTech • STEAM</span>
+          <h3 style="margin:.3rem 0 .35rem 0;">STEAM for Me Mentorship Sandbox</h3>
+          <p style="margin:0 0 .75rem 0;">
+            GitHub-based, 5-level sandbox for Newark middle schoolers learning HTML, Python, Bash, and GitHub.
+          </p>
+          <span class="inline-link">View Cyber Blooms ↗</span>
+        </article>
+      </a>
+
+      <!-- project 3 -->
+      <a class="card-link" href="https://github.com/Tazahnae/tazahnaes-sandcastle" target="_blank" rel="noreferrer">
+        <article class="card">
+          <span class="tag">Virtualization</span>
+          <h3 style="margin:.3rem 0 .35rem 0;">Virtual Machine Lab (UTM on Mac)</h3>
+          <p style="margin:0 0 .75rem 0;">
+            Built a full practice range: Kali, Metasploitable 2, Windows Server 2022 on an M1 Mac using UTM.
+          </p>
+          <p class="text-sm" style="opacity:.6;">Skills: networking, secure setups, testing</p>
+          <span class="inline-link">View setup ↗</span>
+        </article>
+      </a>
+
+      <!-- project 4 -->
+      <a class="card-link" href="https://github.com/Tazahnae" target="_blank" rel="noreferrer">
+        <article class="card">
+          <span class="tag">Python • CLI</span>
+          <h3 style="margin:.3rem 0 .35rem 0;">Taaj’s Chatty Bot (CLI)</h3>
+          <p style="margin:0 0 .75rem 0;">
+            Beginner-friendly chatbot that runs on Kali VM: greetings, time/date, jokes, math, notes, and more.
+          </p>
+          <span class="inline-link">View on GitHub ↗</span>
+        </article>
+      </a>
     </div>
   </section>
 
-  <section id="skills" class="py-14 bg-yellow-50 border-y border-black/10">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl sm:text-3xl font-bold">Core Skills</h2>
-      <p class="mt-3 text-black/80">My core skills center around building secure systems, coding efficiently, and understanding cybersecurity from both practical and theoretical perspectives.</p>
-      <ul id="skills-list" class="mt-6 grid sm:grid-cols-2 gap-4"></ul>
+  <!-- LEARNING / IN PROGRESS -->
+  <section class="section" id="learning">
+    <div class="section-title">
+      <i data-feather="trending-up"></i>
+      <span>Currently Building</span>
     </div>
-  </section>
-
-  <section id="certs" class="py-14 bg-white">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl sm:text-3xl font-bold">Certifications</h2>
-      <ul id="cert-list" class="mt-6 grid sm:grid-cols-2 gap-4"></ul>
-    </div>
-  </section>
-
-  <section id="contact" class="py-16 bg-yellow-50">
-    <div class="mx-auto max-w-6xl px-4">
-      <h2 class="text-2xl sm:text-3xl font-bold">Get in Touch</h2>
-      <p class="mt-3 text-black/90">Interested in collaborating, networking, or learning more about my work? Feel free to reach out.</p>
-      <div class="mt-6 flex flex-wrap gap-3">
-        <a class="px-4 py-2 rounded-full bg-black text-white font-semibold hover:opacity-90" href="mailto:contact@steamforme.org">Email</a>
-        <a class="px-4 py-2 rounded-full border border-black hover:bg-black hover:text-white" href="https://www.linkedin.com/in/INSERT-YOUR-HANDLE" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="px-4 py-2 rounded-full border border-black hover:bg-black hover:text-white" href="https://github.com/Tazahnae" target="_blank" rel="noreferrer">GitHub</a>
+    <div class="learning-grid">
+      <div class="panel">
+        <strong>🎯 2025 Goal</strong>
+        <p style="margin:.4rem 0 0 0;">
+          Entry-level cybersecurity / SOC / IT support role while continuing AWS + Terraform practice.
+        </p>
+      </div>
+      <div class="panel">
+        <strong>📚 In Progress</strong>
+        <p style="margin:.4rem 0 0 0;">
+          CompTIA Security+ (2025) • Program Management (LinkedIn) • TKH Cybersecurity & Innovation Fellowship (2025)
+        </p>
+      </div>
+      <div class="panel">
+        <strong>🛡️ TryHackMe</strong>
+        <p style="margin:.4rem 0 .35rem 0;">Actively completing rooms.</p>
+        <a class="inline-link" href="https://tryhackme.com/p/matthewstaaj?tab=completed-rooms" target="_blank" rel="noreferrer">View Completed Rooms ↗</a>
+      </div>
+      <div class="panel">
+        <strong>🪪 Credly</strong>
+        <p style="margin:.4rem 0 .35rem 0;">AWS Educate + Cisco Networking Academy</p>
+        <a class="inline-link" href="https://www.credly.com/users/tazahnae-matthews" target="_blank" rel="noreferrer">View Badges ↗</a>
       </div>
     </div>
   </section>
 
-  <footer class="py-8 border-t border-black/10 bg-white">
-    <div class="mx-auto max-w-6xl px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-black/70">© <span id="year"></span> Tazahnae Matthews • Built on GitHub Pages</p>
-      <div class="flex items-center gap-4 text-sm">
-        <a class="hover:underline" href="https://tazahnae.github.io/Cyber-Blooms/">Blog</a>
-        <a class="hover:underline" href="https://github.com/Tazahnae">GitHub</a>
-        <a class="hover:underline" href="https://www.linkedin.com/in/INSERT-YOUR-HANDLE">LinkedIn</a>
-      </div>
+  <!-- CASE STUDY (Rubric 30 pts) -->
+  <section class="section" id="case-study">
+    <div class="section-title">
+      <i data-feather="shield"></i>
+      <span>Security Case Study — AWS Threat Detection Lab</span>
     </div>
+    <div class="case-study">
+      <p class="case-meta">Documented to meet TKH portfolio rubric: Executive Summary, Goal, Methodology, Findings, Remediation.</p>
+      <p class="case-title">Executive Summary</p>
+      <p>
+        Built a small, cloud-based blue-team lab in AWS to detect simulated threats using GuardDuty and CloudTrail. The goal was to
+        demonstrate understanding of cloud visibility, alerting, and remediation — without using production resources.
+      </p>
+
+      <p class="case-title" style="margin-top:.6rem;">Goal & Scope</p>
+      <ul class="case-bullets">
+        <li>Simulate suspicious activity (unusual API calls, privilege escalation).</li>
+        <li>Verify logging was centralized (CloudTrail).</li>
+        <li>Route alerts to a SOC-style view using Security Hub.</li>
+      </ul>
+
+      <p class="case-title" style="margin-top:.6rem;">Findings</p>
+      <ul class="case-bullets">
+        <li>Detected misconfigured IAM permissions that allowed broader access than intended.</li>
+        <li>Observed that without GuardDuty enabled, some events would have gone unnoticed.</li>
+      </ul>
+
+      <p class="case-title" style="margin-top:.6rem;">Remediation & Risk</p>
+      <ul class="case-bullets">
+        <li>Enabled GuardDuty + Security Hub across the account.</li>
+        <li>Reduced IAM policy from broad `*` actions to least-privilege.</li>
+        <li>Documented steps in GitHub (README) so the lab can be re-run by another learner.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CONNECT -->
+  <section class="section" id="connect">
+    <div class="section-title">
+      <i data-feather="mail"></i>
+      <span>Let’s Connect</span>
+    </div>
+    <p style="max-width:620px;">
+      Hire me, invite me to a project, or ask me about bringing STEAM for Me to your school or program.
+    </p>
+    <form action="https://formsubmit.co/tazahnaematthews@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from your landing page" />
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="4" placeholder="How can we work together?" required></textarea>
+      <button type="submit" class="btn-primary" style="border:none;cursor:pointer;margin-top:.4rem;">
+        Send Message
+        <i data-feather="send" style="width:16px;height:16px;"></i>
+      </button>
+    </form>
+    <p style="margin-top:1rem;">
+      Or reach me on
+      <a
+        class="inline-link"
+        href="https://www.linkedin.com/in/tazahnae-matthews-347124190"
+        target="_blank"
+        rel="noreferrer"
+      >
+        LinkedIn ↗
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <i data-feather="star" style="width:16px;height:16px;"></i>
+    © <span id="year"></span> Tazahnae Matthews • Cybersecurity in Bloom 🌻
   </footer>
 
   <script>
-    const grid = document.getElementById('project-grid');
-    PROJECTS.forEach(p => {
-      const card = document.createElement('article');
-      card.className = 'card bg-yellow-50 border border-black/10 p-5 flex flex-col gap-3';
-      card.innerHTML = `
-        <div class="flex items-center justify-between">
-          <h3 class="text-lg font-semibold">${p.title}</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-black/5 border border-black/10">${p.tag}</span>
-        </div>
-        <p class="text-sm text-black/80">${p.blurb}</p>
-        <div class="mt-auto flex flex-wrap gap-3">${p.links.map(l=>`<a class='text-sm underline' target='_blank' rel='noreferrer' href='${l.href}'>${l.label} →</a>`).join('')}</div>
-      `;
-      grid.appendChild(card);
-    });
+    feather.replace();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    const skills = document.getElementById('skills-list');
-    SKILLS.forEach(s => {
-      const card = document.createElement('div');
-      card.className = 'card bg-white border border-black/10 p-4';
-      card.innerHTML = `<strong>${s.name}</strong><p class='text-sm mt-2 text-black/80'>${s.desc}</p>`;
-      skills.appendChild(card);
-    });
+    // tiny scroll reveal
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      },
+      { threshold: 0.18 }
+    );
 
-    const certList = document.getElementById('cert-list');
-    CERTS.forEach(c => {
-      const li = document.createElement('li');
-      li.className = 'card bg-yellow-50 border border-black/10 p-4';
-      li.innerHTML = `<div class='flex items-center justify-between'><strong>${c.title}</strong><span class='text-sm text-black/70'>${c.year}</span></div><p class='text-sm text-black/80 mt-2'>${c.note||''}</p>`;
-      certList.appendChild(li);
+    document.querySelectorAll(".section, .card, .panel, .case-study").forEach((el) => {
+      el.style.opacity = 0;
+      el.style.transform = "translateY(16px)";
+      el.style.transition = "all .6s ease";
+      observer.observe(el);
     });
-
-    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
