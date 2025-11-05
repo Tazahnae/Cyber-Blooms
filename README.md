@@ -1,13 +1,13 @@
-# 🌻 TaZahnae Matthews — Cybersecurity in Bloom  
+# 🌻 TaZahnae Matthews 
 ### *Cloud • Security • Program Management • Virtualization*
 
-Welcome to my professional portfolio — a living collection of my work in cybersecurity, cloud automation, and technology education.  
+Welcome to my professional portfolio a living collection of my work in cybersecurity, cloud automation, and technology education.  
 I blend creativity with technical skill to design, secure, and document digital systems that empower communities to grow safely in an evolving tech landscape.  
 
 ---
 
 ## 🚀 Live Portfolio  
-🔗 **View Website:** [https://tazahnae.github.io/Tazahnae-Matthews-Portfolio/](https://tazahnae.github.io/Tazahnae-Matthews-Portfolio/)  
+🔗 **View Website:** [https://tazahnae.github.io/Tazahnae-Matthews-Portfolio/](https://(https)://tazahnae.github.io/Cyber-Blooms/#docs)  
 🔗 **LinkedIn:** [linkedin.com/in/tazahnae-matthews-347124190](https://www.linkedin.com/in/tazahnae-matthews-347124190)  
 🔗 **Resume:** [View Résumé](https://tazahnae.github.io/my-portfolio/)  
 🔗 **GitHub:** [github.com/Tazahnae](https://github.com/Tazahnae)
