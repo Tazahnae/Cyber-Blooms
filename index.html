@@ -11,7 +11,7 @@
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  
+  <script src="https://unpkg.com/feather-icons"></script>
 
   <style>
     :root {
@@ -54,10 +54,17 @@
     nav a:hover { color: var(--sunflower); }
 
     /* HERO */
-    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1100px;
-            margin: 4rem auto; padding: 0 1.5rem; align-items: center; }
+    .hero { 
+      display: grid; 
+      grid-template-columns: 1fr; /* single column now */
+      gap: 2rem; 
+      max-width: 1100px;
+      margin: 4rem auto; 
+      padding: 0 1.5rem; 
+      align-items: center; 
+    }
     .hero-title { font-size: clamp(2.2rem, 4vw, 3rem); color: var(--sunflower); margin-bottom: .8rem; }
-    .hero-sub { line-height: 1.6; color: rgba(245,255,255,0.85); max-width: 580px; }
+    .hero-sub { line-height: 1.6; color: rgba(245,255,255,0.85); max-width: 720px; }
     .btn-primary {
       display: inline-flex; align-items: center; gap: .4rem;
       background: var(--sunflower); color: #0b132b; border-radius: 999px;
@@ -65,19 +72,6 @@
       margin-top: 1rem;
     }
     .btn-primary:hover { filter: brightness(1.1); }
-
-    /* Fallback hero art box */
-    .hero-art {
-      width: 100%; border-radius: 12px; overflow: hidden; position: relative;
-      background: radial-gradient(600px 300px at 20% -10%, rgba(255,197,18,.18), rgba(255,197,18,0)),
-                  linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
-      aspect-ratio: 16/10;
-      display: grid; place-items: center;
-    }
-    .hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .hero-art .fallback { position:absolute; inset:0; display:none; }
-    .hero-art.fallback-active .fallback { display:block; }
-    .hero-art.fallback-active img { display:none; }
 
     /* SECTIONS */
     .section { max-width: 1100px; margin: 0 auto; padding: 3rem 1.25rem; }
@@ -116,8 +110,7 @@
       box-shadow:0 0 25px rgba(255,197,18,.1);
     }
     .pdf-title { color:#ffc512; font-weight:700; margin-bottom:.3rem; font-size:1.1rem; }
-    .pdf-frame { width:100%; height:400px; border:none; border-radius:8px; background:#fff; }
-    .pdf-fallback { margin:.5rem 0 0; }
+    .pdf-iframe { width:100%; height:400px; border:none; border-radius:8px; background:#fff; }
     .pdf-link { display:inline-block; margin-top:.5rem; color:#ffc512; font-weight:600; text-decoration:none; }
 
     /* CASE STUDY */
@@ -141,19 +134,6 @@
     .list-box a { color: var(--sunflower); text-decoration: none; }
     .list-box a:hover { text-decoration: underline; }
 
-    /* CONTACT FORM */
-    form {
-      max-width: 560px; display: grid; gap: .7rem; margin-top: 1rem;
-    }
-    input, textarea {
-      background: rgba(255,255,255,.02);
-      border: 1px solid rgba(91,192,190,.18);
-      border-radius: .7rem;
-      padding: .65rem .75rem;
-      color: #fff; font-family: inherit;
-    }
-    input:focus, textarea:focus { outline: 1px solid rgba(255,197,18,.4); }
-
     footer { text-align:center; padding:1.5rem 0; color:rgba(255,255,255,.4); font-size:.85rem; }
   </style>
 </head>
@@ -176,26 +156,22 @@
       <a href="#learning">Learning</a>
       <a href="#connect">Connect</a>
     </nav>
-  </header> 
-  
-  <!-- HERO -->
+  </header>
+
+  <!-- HERO (no image, single column) -->
   <section class="hero">
     <div>
-      <h1 class="hero-title">Blending Creativity with Cybersecurity</h1>
+      <h1 class="hero-title">Welcome to My Portfolio  Tazahnae Matthews </h1>
       <p class="hero-sub">
         I build digital experiences that protect, educate, and inspire.
         My mission is to help my community understand technology, explore cybersecurity with confidence,
-        and take part in the next wave of innovation. Through hands-on labs and lifelong learning,
+        and take part in the next wave of innovation. Through hands on labs and lifelong learning,
         I’m growing right alongside the evolution of tech.
       </p>
       <a href="https://github.com/Tazahnae" target="_blank" class="btn-primary">
         Visit My GitHub
         <i data-feather="arrow-right" style="width:16px;height:16px;"></i>
       </a>
-    </div>
-    <div>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Cyber_security_banner.jpg"
-           alt="cyberspace art" style="width:100%;border-radius:12px;opacity:.8;">
     </div>
   </section>
 
@@ -253,69 +229,78 @@
 
       <p><strong>Project Title:</strong> Kali Linux Attack on Metasploitable 2 through pfSense Firewall</p>
       <p><strong>Project Objective:</strong> Build a fully isolated environment with Kali (attacker), Metasploitable (target), and pfSense (firewall) to monitor, control, and evaluate traffic — demonstrating essential penetration-testing skills and secure network configuration.</p>
+<section class="section" id="case-study">
+  <div class="section-title"><i data-feather="shield"></i><span>🧩 Case Study — Kali Linux Attack on Metasploitable 2</span></div>
+  <div class="case-box">
+    
+    <p><strong>Overview:</strong> This case study demonstrates a controlled cybersecurity simulation designed to explore system vulnerabilities, evaluate firewall protection, and document network security behavior through hands-on testing and analysis.</p>
 
-      <p><a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="inline-link">Open full case study PDF ↗</a></p>
+    <p><strong>Objective:</strong> To simulate a realistic penetration test using Kali Linux (attacker) against a vulnerable Metasploitable 2 machine (target), with all traffic routed through a pfSense firewall. The goal was to understand both offensive techniques and defensive monitoring strategies.</p>
+
+    <p><strong>Environment Setup:</strong> The lab was built using UTM on macOS, running three isolated virtual machines — Kali Linux, Metasploitable 2, and pfSense. The pfSense firewall acted as the network gateway and control point for all inbound and outbound traffic.</p>
+
+    <p><strong>Tools Used:</strong> Kali Linux • Metasploitable 2 • pfSense • Nmap • Metasploit • Wireshark • UTM Virtualization</p>
+
+    <p><strong>Findings:</strong> 
+      The simulation revealed multiple open and insecure services on Metasploitable 2, including FTP, Telnet, and vulnerable web applications. Using Nmap, the attacker identified exploitable ports and services, which were later targeted via Metasploit. Packet captures in Wireshark displayed real-time attack patterns, while pfSense successfully logged and filtered malicious traffic, proving the effectiveness of properly configured firewall rules.
+    </p>
+
+    <p><strong>Remediation:</strong> 
+      Firewall rules were hardened to close unnecessary ports, and intrusion detection settings were activated. Patch management and system updates were recommended to remove known vulnerabilities. Segmentation and IDS integration were proposed for enhanced protection.
+    </p>
+
+    <p><strong>Outcome:</strong> 
+      The project reinforced critical SOC concepts — detection, segmentation, response, and documentation. It served as a practical demonstration of how offense informs defense, aligning with TaZahnae’s mission to make cybersecurity learning accessible and interactive for the community.
+    </p>
+
+    <p><a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="inline-link">📘 View Full Case Study PDF ↗</a></p>
+  </div>
+</section>      <p><a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="inline-link">Open full case study PDF ↗</a></p>
     </div>
   </section>
 
   <!-- FEATURED PROFILE (RESUME + EMBEDDED PDFs) -->
-<section class="section" id="featured-profile">
-  <div class="section-title"><i data-feather="file-text"></i><span>📂 Featured Writeups</span></div>
+  <section class="section" id="featured-profile">
+    <div class="section-title"><i data-feather="file-text"></i><span>📂 Featured Writeups</span></div>
 
-  <div class="profile-grid">
-    <!-- Resume (link instead of embed — target is an HTML page) -->
-    <div class="profile-card">
-      <div class="pdf-title">📄 Professional Resume — Tazahnae Matthews</div>
-      <p style="margin:.35rem 0 .5rem 0;opacity:.85;">
-        Opens my live résumé page on GitHub Pages.
-      </p>
-      <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="pdf-link">Open Résumé ↗</a>
-    </div>
+    <div class="profile-grid">
+      <!-- Resume -->
+      <div class="profile-card">
+        <div class="pdf-title">📄 Professional Resume — Tazahnae Matthews</div>
+        <iframe class="pdf-iframe" src="https://tazahnae.github.io/Tazahnae-s-Resume-/" title="Resume PDF"></iframe>
+        <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="pdf-link">Open Full Resume ↗</a>
+      </div>
 
-    <!-- Case Study (embedded) -->
-    <div class="profile-card">
-      <div class="pdf-title">🧠 Case Study: Kali → Metasploitable via pfSense (PDF)</div>
-      <object class="pdf-frame"
-              data="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf"
-              type="application/pdf">
-        <div class="pdf-fallback">
-          PDF viewer not supported.
-          <a class="pdf-link" href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank">Open Full PDF ↗</a>
-        </div>
-      </object>
-      <a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
-    </div>
+      <!-- Case Study PDF (embedded) -->
+      <div class="profile-card">
+        <div class="pdf-title">🧠 Case Study: Kali → Metasploitable via pfSense</div>
+        <iframe class="pdf-iframe" src="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" title="Case Study PDF"></iframe>
+        <a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+      </div>
 
-    <!-- Personal Backup (embedded) -->
-    <div class="profile-card">
-      <div class="pdf-title">💾 Personal Backup (Simulation) — One-Pager (PDF)</div>
-      <object class="pdf-frame"
-              data="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf"
-              type="application/pdf">
-        <div class="pdf-fallback">
-          PDF viewer not supported.
-          <a class="pdf-link" href="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" target="_blank">Open Full PDF ↗</a>
-        </div>
-      </object>
-      <a href="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
-    </div>
+      <!-- Personal Backup (embedded) -->
+      <div class="profile-card">
+        <div class="pdf-title">💾 Personal Backup (Simulation) — One-Pager</div>
+        <iframe class="pdf-iframe" src="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" title="Personal Backup PDF"></iframe>
+        <a href="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+      </div>
 
-    <!-- Firewall (embedded) -->
-    <div class="profile-card">
-      <div class="pdf-title">🔥 Firewall Simulation — Quick Summary (PDF)</div>
-      <object class="pdf-frame"
-              data="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf"
-              type="application/pdf">
-        <div class="pdf-fallback">
-          PDF viewer not supported.
-          <a class="pdf-link" href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank">Open Full PDF ↗</a>
-        </div>
-      </object>
-      <a href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+      <!-- Firewall Simulation (embedded) -->
+      <div class="profile-card">
+        <div class="pdf-title">🔥 Firewall Simulation — Quick Summary</div>
+        <iframe class="pdf-iframe" src="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" title="Firewall Simulation PDF"></iframe>
+        <a href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+      </div>
+
+      <!-- Network Lab Summary (embedded) -->
+      <div class="profile-card">
+        <div class="pdf-title">🌐 Network Lab Summary — Packet Tracer</div>
+        <iframe class="pdf-iframe" src="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" title="Network Lab PDF"></iframe>
+        <a href="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+      </div>
     </div>
-  </div>
-</section>
-  
+  </section>
+
   <!-- LEARNING & CREDENTIALS -->
   <section class="section" id="learning">
     <div class="section-title"><i data-feather="activity"></i><span>🚀 Learning & Credentials</span></div>
@@ -345,15 +330,21 @@
       <a class="inline-link" href="https://tryhackme.com/p/matthewstaaj?tab=completed-rooms" target="_blank" rel="noreferrer">View Full TryHackMe Profile ↗</a>
 
       <strong>🏅 Credly — Badges:</strong>
-      <ul>
-        <li><a href="https://www.credly.com/users/tazahnae-matthews/badges" target="_blank">AWS Educate: Cloud 101</a></li>
+      <ul> <ul>
+  <li>AWS Educate Getting Started with Compute — Training Badge (Jul 1, 2025)</li>
+  <li>AWS Educate Getting Started with Databases — Training Badge (Jul 9, 2025)</li>
+  <li>AWS Educate Getting Started with Networking — Training Badge (Jul 15, 2025)</li>
+  <li>AWS Educate Getting Started with Storage — Training Badge (Jul 3, 2025)</li>
+  <li>AWS Educate Introduction to Cloud 101 — Training Badge (Jun 17, 2025)</li>
+  <li>Cisco Networking Academy: Networking Basics (Apr 2, 2025)</li>
         <li><a href="https://www.credly.com/users/tazahnae-matthews/badges" target="_blank">Cisco Networking Basics</a></li>
       </ul>
       <a class="inline-link" href="https://www.credly.com/users/tazahnae-matthews" target="_blank" rel="noreferrer">View Full Credly Profile ↗</a>
     </div>
   </section>
 
-  <!-- CONNECT -->
+ 
+</html>  <!-- CONNECT -->
   <section class="section" id="connect">
     <div class="section-title"><i data-feather="mail"></i><span>Let’s Connect</span></div>
     <p>📫 I’m always open to collaborating on projects, sharing knowledge, or connecting with others passionate about cybersecurity and tech education. Feel free to reach out!</p>
