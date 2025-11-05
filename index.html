@@ -66,6 +66,19 @@
     }
     .btn-primary:hover { filter: brightness(1.1); }
 
+    /* Fallback hero art box */
+    .hero-art {
+      width: 100%; border-radius: 12px; overflow: hidden; position: relative;
+      background: radial-gradient(600px 300px at 20% -10%, rgba(255,197,18,.18), rgba(255,197,18,0)),
+                  linear-gradient(135deg, #0b132b 0%, #1c2541 100%);
+      aspect-ratio: 16/10;
+      display: grid; place-items: center;
+    }
+    .hero-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-art .fallback { position:absolute; inset:0; display:none; }
+    .hero-art.fallback-active .fallback { display:block; }
+    .hero-art.fallback-active img { display:none; }
+
     /* SECTIONS */
     .section { max-width: 1100px; margin: 0 auto; padding: 3rem 1.25rem; }
     .section-title { display: flex; align-items: center; gap: .5rem;
@@ -103,7 +116,8 @@
       box-shadow:0 0 25px rgba(255,197,18,.1);
     }
     .pdf-title { color:#ffc512; font-weight:700; margin-bottom:.3rem; font-size:1.1rem; }
-    .pdf-iframe { width:100%; height:400px; border:none; border-radius:8px; background:#fff; }
+    .pdf-frame { width:100%; height:400px; border:none; border-radius:8px; background:#fff; }
+    .pdf-fallback { margin:.5rem 0 0; }
     .pdf-link { display:inline-block; margin-top:.5rem; color:#ffc512; font-weight:600; text-decoration:none; }
 
     /* CASE STUDY */
@@ -127,6 +141,19 @@
     .list-box a { color: var(--sunflower); text-decoration: none; }
     .list-box a:hover { text-decoration: underline; }
 
+    /* CONTACT FORM */
+    form {
+      max-width: 560px; display: grid; gap: .7rem; margin-top: 1rem;
+    }
+    input, textarea {
+      background: rgba(255,255,255,.02);
+      border: 1px solid rgba(91,192,190,.18);
+      border-radius: .7rem;
+      padding: .65rem .75rem;
+      color: #fff; font-family: inherit;
+    }
+    input:focus, textarea:focus { outline: 1px solid rgba(255,197,18,.4); }
+
     footer { text-align:center; padding:1.5rem 0; color:rgba(255,255,255,.4); font-size:.85rem; }
   </style>
 </head>
@@ -149,8 +176,8 @@
       <a href="#learning">Learning</a>
       <a href="#connect">Connect</a>
     </nav>
-  </header>
-
+  </header> 
+  
   <!-- HERO -->
   <section class="hero">
     <div>
@@ -232,47 +259,63 @@
   </section>
 
   <!-- FEATURED PROFILE (RESUME + EMBEDDED PDFs) -->
-  <section class="section" id="featured-profile">
-    <div class="section-title"><i data-feather="file-text"></i><span>📂 Featured Writeups</span></div>
+<section class="section" id="featured-profile">
+  <div class="section-title"><i data-feather="file-text"></i><span>📂 Featured Writeups</span></div>
 
-    <div class="profile-grid">
-      <!-- Resume -->
-      <div class="profile-card">
-        <div class="pdf-title">📄 Professional Resume — Tazahnae Matthews</div>
-        <iframe class="pdf-iframe" src="https://tazahnae.github.io/Tazahnae-s-Resume-/" title="Resume PDF"></iframe>
-        <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="pdf-link">Open Full Resume ↗</a>
-      </div>
-
-      <!-- Case Study PDF (embedded) -->
-      <div class="profile-card">
-        <div class="pdf-title">🧠 Case Study: Kali → Metasploitable via pfSense</div>
-        <iframe class="pdf-iframe" src="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" title="Case Study PDF"></iframe>
-        <a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
-      </div>
-
-      <!-- Personal Backup (embedded) -->
-      <div class="profile-card">
-        <div class="pdf-title">💾 Personal Backup (Simulation) — One-Pager</div>
-        <iframe class="pdf-iframe" src="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" title="Personal Backup PDF"></iframe>
-        <a href="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
-      </div>
-
-      <!-- Firewall Simulation (embedded) -->
-      <div class="profile-card">
-        <div class="pdf-title">🔥 Firewall Simulation — Quick Summary</div>
-        <iframe class="pdf-iframe" src="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" title="Firewall Simulation PDF"></iframe>
-        <a href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
-      </div>
-
-      <!-- Network Lab Summary (embedded) -->
-      <div class="profile-card">
-        <div class="pdf-title">🌐 Network Lab Summary — Packet Tracer</div>
-        <iframe class="pdf-iframe" src="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" title="Network Lab PDF"></iframe>
-        <a href="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
-      </div>
+  <div class="profile-grid">
+    <!-- Resume (link instead of embed — target is an HTML page) -->
+    <div class="profile-card">
+      <div class="pdf-title">📄 Professional Resume — Tazahnae Matthews</div>
+      <p style="margin:.35rem 0 .5rem 0;opacity:.85;">
+        Opens my live résumé page on GitHub Pages.
+      </p>
+      <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="pdf-link">Open Résumé ↗</a>
     </div>
-  </section>
 
+    <!-- Case Study (embedded) -->
+    <div class="profile-card">
+      <div class="pdf-title">🧠 Case Study: Kali → Metasploitable via pfSense (PDF)</div>
+      <object class="pdf-frame"
+              data="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf"
+              type="application/pdf">
+        <div class="pdf-fallback">
+          PDF viewer not supported.
+          <a class="pdf-link" href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank">Open Full PDF ↗</a>
+        </div>
+      </object>
+      <a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+    </div>
+
+    <!-- Personal Backup (embedded) -->
+    <div class="profile-card">
+      <div class="pdf-title">💾 Personal Backup (Simulation) — One-Pager (PDF)</div>
+      <object class="pdf-frame"
+              data="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf"
+              type="application/pdf">
+        <div class="pdf-fallback">
+          PDF viewer not supported.
+          <a class="pdf-link" href="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" target="_blank">Open Full PDF ↗</a>
+        </div>
+      </object>
+      <a href="docs/Personal%20Backup%20%28Simulation%29%20%E2%80%94%20Friendly%20One-Pager-2.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+    </div>
+
+    <!-- Firewall (embedded) -->
+    <div class="profile-card">
+      <div class="pdf-title">🔥 Firewall Simulation — Quick Summary (PDF)</div>
+      <object class="pdf-frame"
+              data="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf"
+              type="application/pdf">
+        <div class="pdf-fallback">
+          PDF viewer not supported.
+          <a class="pdf-link" href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank">Open Full PDF ↗</a>
+        </div>
+      </object>
+      <a href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" class="pdf-link">Open Full PDF ↗</a>
+    </div>
+  </div>
+</section>
+  
   <!-- LEARNING & CREDENTIALS -->
   <section class="section" id="learning">
     <div class="section-title"><i data-feather="activity"></i><span>🚀 Learning & Credentials</span></div>
@@ -314,8 +357,33 @@
   <section class="section" id="connect">
     <div class="section-title"><i data-feather="mail"></i><span>Let’s Connect</span></div>
     <p>📫 I’m always open to collaborating on projects, sharing knowledge, or connecting with others passionate about cybersecurity and tech education. Feel free to reach out!</p>
-    <p><strong>Email:</strong> <a href="mailto:t.matthews@steamforme.org" style="color:#ffc512;text-decoration:none;">t.matthews@steamforme.org</a></p>
-    <a href="https://www.linkedin.com/in/tazahnae-matthews-347124190" target="_blank" class="btn-primary">Connect on LinkedIn</a>
+
+    <!-- Contact form (FormSubmit.co) -->
+    <form action="https://formsubmit.co/t.matthews@steamforme.org" method="POST">
+      <!-- Optional FormSubmit settings -->
+      <input type="hidden" name="_subject" value="New message from your Cyber Blooms landing page" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+
+      <input type="text" name="name" placeholder="Your name" required />
+      <input type="email" name="email" placeholder="Your email" required />
+      <textarea name="message" rows="4" placeholder="How can we work together?" required></textarea>
+
+      <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">
+        Send Message
+        <i data-feather="send" style="width:16px;height:16px;"></i>
+      </button>
+    </form>
+
+    <p style="margin-top:1rem;">
+      Or email me directly:
+      <a href="mailto:t.matthews@steamforme.org" class="inline-link">t.matthews@steamforme.org</a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/tazahnae-matthews-347124190" target="_blank" class="btn-primary">
+        Connect on LinkedIn
+      </a>
+    </p>
   </section>
 
   <footer>
