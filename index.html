@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Cybersecurity in Bloom — immersive portfolio for Tazahnae Matthews" />
-  <title>🌻 Cybersecurity in Bloom • Where Curiosity Meets Growth — Tazahnae Matthews</title>
+  <title>🌻 Cybersecurity In Bloom • Where Curiosity Meets Growth — Tazahnae Matthews</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -38,16 +38,24 @@
         radial-gradient(1000px 500px at 95% 0%, rgba(204,85,0,0.12), transparent 60%),
         linear-gradient(180deg, #0b132b 0%, #0b132b 60%, #0a1024 100%);
       background-attachment: fixed;
+      overflow-x: hidden;
     }
 
-    /* faint grid to sell the cyberspace vibe without clutter */
+    /* subtle animated sunflower cyber-grid */
     body::before {
       content: "";
       position: fixed; inset: 0; pointer-events: none; z-index: 0;
-      background-image: linear-gradient(rgba(255,197,18,0.06) 1px, transparent 1px),
-                        linear-gradient(90deg, rgba(91,192,190,0.06) 1px, transparent 1px);
-      background-size: 28px 28px;
-      mask-image: radial-gradient(60% 60% at 50% 40%, black 65%, transparent 100%);
+      background-image:
+        linear-gradient(rgba(255,197,18,0.055) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,197,18,0.055) 1px, transparent 1px);
+      background-size: 48px 48px;
+      animation: gridshift 42s linear infinite;
+      opacity: .35;
+      mask-image: radial-gradient(65% 60% at 50% 40%, black 65%, transparent 100%);
+    }
+    @keyframes gridshift {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 96px 96px, 96px 96px; }
     }
 
     /* NAV */
@@ -181,7 +189,6 @@
       <h1 id="hero-title" class="hero-title">Welcome To My Portfolio 
         Where Curiosity Meets Growth</h1>
       <p class="hero-sub">
-        A cyberspace-meets-sunflower playground: security labs, cloud experiments, and hands‑on projects that bloom into skills.
       </p>
       <div class="btn-row">
         <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="btn-primary" aria-label="Open Tazahnae's resume in a new tab">
@@ -260,7 +267,7 @@
   <section class="section" id="case-study" aria-labelledby="case-title">
     <div class="section-title"><i data-feather="shield"></i><span id="case-title">🧩 Case Study Capstone — Kali Linux Attack on Metasploitable 2</span></div>
     <div class="case-box">
-      <p><strong>Overview:</strong>  I built a controlled cybersecurity simulation designed to explore system vulnerabilities, evaluate firewall protection, and document network security behavior through hands‑on testing and analysis.</p>
+      <p><strong>Overview:</strong>  I built a controlled cybersecurity simulation designed to explore system vulnerabilities, evaluate firewall protection, and document network security behavior through hands-on testing and analysis.</p>
       <p><strong>Objective:</strong> Simulate a realistic penetration test using Kali Linux (attacker) against a vulnerable Metasploitable 2 machine (target), with all traffic routed through a pfSense firewall to observe attack paths and defensive logging.</p>
       <p><strong>Environment:</strong> Built in UTM on macOS with three isolated VMs — Kali Linux, Metasploitable 2, and pfSense acting as the gateway.</p>
       <p><strong>Tools Used:</strong> Kali • Metasploitable 2 • pfSense • Nmap • Metasploit • Wireshark • UTM</p>
@@ -310,6 +317,7 @@
         <li>The Knowledge House — Cybersecurity & Innovation Fellowship</li>
       </ul>
 
+      
       <strong>🛡️ TryHackMe — Completed Rooms (selection):</strong>
       <ul>
         <li>Intro to Cyber Security</li>
@@ -327,6 +335,7 @@
       </ul>
       <a class="inline-link" href="https://tryhackme.com/p/matthewstaaj?tab=completed-rooms" target="_blank" rel="noreferrer noopener">View Full TryHackMe Profile ↗</a>
 
+      
       <strong>🏅 Credly — Badges:</strong>
       <ul>
         <li>AWS Educate Getting Started with Compute — Training Badge (Jul 1, 2025)</li>
