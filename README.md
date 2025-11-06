@@ -6,11 +6,16 @@ Inside this repository, you’ll find my featured projects, case studies, AI cha
 
 
  🚀 Live Portfolio  
-🔗 **View Website:** [https://tazahnae.github.io/Tazahnae-Matthews-Portfolio/](https://(https)://tazahnae.github.io/Cyber-Blooms/#docs)  
-🔗 **LinkedIn:** [linkedin.com/in/tazahnae-matthews-347124190](https://www.linkedin.com/in/tazahnae-matthews-347124190)  
-🔗 **Resume:** [View Résumé](https://tazahnae.github.io/my-portfolio/)  
-🔗 **GitHub:** [github.com/Tazahnae](https://github.com/Tazahnae)
-
+<section id="live-links" style="margin-top:2rem;">
+  <h2 class="section-title"><i data-feather="globe"></i>🚀 Live Portfolio & Professional Links</h2>
+  <ul style="list-style:none; padding:0; line-height:1.9; font-weight:600;">
+    <li>💻 <a href="https://tazahnae.github.io/Cyber-Blooms/" target="_blank" style="color:#cc5500; text-decoration:none;">View Portfolio</a></li>
+    <li>📄 <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" style="color:#cc5500; text-decoration:none;">View Live Résumé</a></li>
+    <li>💼 <a href="https://www.linkedin.com/in/tazahnae-matthews-347124190" target="_blank" style="color:#cc5500; text-decoration:none;">LinkedIn Profile</a></li>
+    <li>🐙 <a href="https://github.com/Tazahnae" target="_blank" style="color:#cc5500; text-decoration:none;">GitHub Repository</a></li>
+    <li>🌻 <a href="https://www.steamforme.org" target="_blank" style="color:#cc5500; text-decoration:none;">STEAM for Me</a></li>
+  </ul>
+</section>
 
 🌞 About Me  
 
