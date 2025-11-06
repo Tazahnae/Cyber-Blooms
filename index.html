@@ -4,315 +4,228 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Cybersecurity in Bloom — immersive portfolio for Tazahnae Matthews" />
-  <title>🌻 Cybersecurity in Bloom • Where Curiosity Meets Growth — Tazahnae Matthews</title>
+  <title>🌻 Cybersecurity in Bloom • Where Curiosity Meets Growth Tazahnae Matthews</title>
 
   <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/feather-icons"></script>
 
   <style>
-    :root {
-      /* Fall cyberspace sunflower palette */
-      --sunflower: #f6c324;       /* sunflower gold */
-      --amber: #ffb347;           /* amber accent */
-      --burnt: #d2691e;           /* burnt orange */
-      --olive: #708238;           /* earthy olive */
-      --night: #0a0f1c;           /* deep cyberspace background */
-      --nebula: #1a2438;          /* dark indigo blue */
-      --ink: rgba(250, 250, 250, 0.95);
-      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    :root{
+      --sunflower:#ffcc33;  /* sunflower yellow */
+      --amber:#ffb347;      /* amber */
+      --burnt:#cc5500;      /* burnt orange */
+      --cream:#fffaf2;      /* readable warm white */
+      --ink:rgba(40,25,5,0.92);
+      font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
     }
 
-    * { box-sizing: border-box; scroll-behavior: smooth; }
+    *{box-sizing:border-box;scroll-behavior:smooth}
 
-    body {
-      margin: 0;
-      color: var(--ink);
-      min-height: 100vh;
-      background:
-        radial-gradient(circle at 20% 0%, rgba(255,179,71,0.12), transparent 60%),
-        radial-gradient(circle at 80% 0%, rgba(246,195,36,0.12), transparent 60%),
-        linear-gradient(180deg, var(--nebula) 0%, var(--night) 100%);
-      background-attachment: fixed;
-      line-height: 1.6;
-      overflow-x: hidden;
+    /* ===== WARM FALL BACKGROUND (burnt orange -> sunflower) ===== */
+    body{
+      margin:0; color:var(--cream); min-height:100vh; line-height:1.6;
+      background:linear-gradient(180deg,var(--burnt) 0%,var(--amber) 45%,var(--sunflower) 100%);
+      background-attachment:fixed;
     }
-
-    /* Subtle animated cyber grid */
-    body::before {
-      content: "";
-      position: fixed; inset: 0; z-index: 0; pointer-events: none;
+    /* subtle cyber grid */
+    body::before{
+      content:""; position:fixed; inset:0; z-index:0; pointer-events:none;
       background-image:
-        linear-gradient(rgba(255,179,71,0.05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,179,71,0.05) 1px, transparent 1px);
-      background-size: 80px 80px;
-      animation: gridMove 60s linear infinite;
-      opacity: 0.35;
-      /* gentle vignette so text pops */
-      mask-image: radial-gradient(65% 60% at 50% 40%, black 65%, transparent 100%);
+        linear-gradient(rgba(255,255,255,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size:80px 80px; animation:gridMove 60s linear infinite; opacity:.25;
     }
-    @keyframes gridMove {
-      0% { background-position: 0 0, 0 0; }
-      100% { background-position: 160px 160px, 160px 160px; }
-    }
+    @keyframes gridMove{0%{background-position:0 0,0 0}100%{background-position:160px 160px,160px 160px}}
 
-    /* NAVIGATION */
-    header {
-      position: sticky; top: 0; z-index: 999;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 1rem 1.6rem;
-      background: rgba(10, 15, 28, 0.95);
-      border-bottom: 1px solid rgba(255, 179, 71, 0.25);
-      backdrop-filter: blur(10px);
+    /* NAV */
+    header{
+      position:sticky; top:0; z-index:999;
+      display:flex; justify-content:space-between; align-items:center;
+      padding:1rem 1.6rem; background:rgba(80,40,5,.6);
+      border-bottom:1px solid rgba(255,255,255,.35); backdrop-filter:blur(8px);
     }
-    .brand { display: flex; align-items: center; gap: .6rem; }
-    .brand-badge {
-      width: 38px; height: 38px; border-radius: 50%;
-      background: radial-gradient(circle, var(--sunflower), rgba(255,197,18,0.08));
-      display: grid; place-items: center; font-weight: 800; color: var(--night);
-      box-shadow: 0 0 15px rgba(255,179,71,0.3);
+    .brand{display:flex; align-items:center; gap:.6rem}
+    .brand-badge{
+      width:38px;height:38px;border-radius:50%;
+      background:radial-gradient(circle,var(--sunflower),rgba(255,197,18,.15));
+      display:grid;place-items:center;font-weight:800;color:var(--burnt);
+      box-shadow:0 0 10px rgba(255,197,18,.4)
     }
-    header h1 { margin: 0; font-size: 1.05rem; color: var(--sunflower); }
-    header small { opacity:.8; font-size:.72rem; color: var(--amber); }
-    nav a {
-      margin-left: 1rem; color: var(--ink); text-decoration: none;
-      font-size: 0.95rem; transition: 0.3s ease;
-      padding:.4rem .65rem; border-radius:.5rem;
+    header h1{margin:0;font-size:1.05rem;color:var(--sunflower)}
+    header small{opacity:.85;font-size:.72rem}
+    nav a{
+      margin-left:1rem;color:var(--cream);text-decoration:none;font-size:.95rem;
+      transition:.3s ease;padding:.4rem .65rem;border-radius:.5rem
     }
-    nav a:hover { background: var(--sunflower); color: var(--night); }
+    nav a:hover{background:var(--sunflower);color:var(--ink)}
 
     /* HERO */
-    .hero {
-      position: relative; z-index: 1;
-      text-align: center; max-width: 1000px; margin: 4rem auto 3rem; padding: 0 1.5rem;
+    .hero{text-align:center;max-width:1000px;margin:4rem auto 3rem;padding:0 1.5rem;position:relative;z-index:1}
+    .hero-title{font-size:clamp(2.4rem,4vw,3rem);color:var(--cream);margin-bottom:.5rem;text-shadow:0 0 10px rgba(0,0,0,.28)}
+    .hero-sub{color:var(--ink);font-weight:500;font-size:1.05rem;max-width:760px;margin:0 auto 1.3rem}
+    .btn-primary{
+      display:inline-flex;align-items:center;gap:.4rem;background:var(--sunflower);color:#5a2d00;
+      border-radius:999px;padding:.75rem 1.5rem;text-decoration:none;font-weight:700;box-shadow:0 0 12px rgba(0,0,0,.25)
     }
-    .hero-title {
-      font-size: clamp(2.4rem, 4vw, 3rem);
-      color: var(--sunflower);
-      margin-bottom: .6rem;
-      text-shadow: 0 0 8px rgba(255,179,71,0.3);
-    }
-    .hero-sub {
-      color: rgba(255,255,255,0.93);
-      font-size: 1.05rem;
-      margin: 0 auto 1.3rem;
-      max-width: 760px;
-    }
-    .btn-row { display:flex; gap:.7rem; justify-content:center; flex-wrap:wrap; }
-    .btn-primary {
-      display:inline-flex; align-items:center; gap:.4rem;
-      background: linear-gradient(180deg, var(--sunflower), var(--amber));
-      color:#0b132b;
-      border-radius: 999px;
-      padding:.75rem 1.5rem;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow: 0 0 20px rgba(255,179,71,0.25);
-    }
-    .btn-primary:hover { filter: brightness(1.1); transform: translateY(-2px); }
+    .btn-primary:hover{filter:brightness(1.08);transform:translateY(-2px)}
 
-    /* SECTIONS */
-    .section { max-width: 1100px; margin: 0 auto; padding: 3rem 1.25rem; position: relative; z-index: 1; }
-    .section-title { display:flex; align-items:center; gap:.5rem; color:var(--sunflower); font-size:1.4rem; margin-bottom:1.2rem; }
-    .divider { height:1px; border:0; background: linear-gradient(90deg, transparent, rgba(255,179,71,0.4), transparent); margin:1.4rem 0 0; }
+    /* LAYOUT */
+    .section{max-width:1100px;margin:0 auto;padding:3rem 1.25rem;position:relative;z-index:1}
+    .section-title{display:flex;align-items:center;gap:.5rem;color:var(--cream);font-size:1.4rem;margin-bottom:1.2rem}
+    .divider{height:1px;border:0;background:rgba(255,255,255,.5);margin:1.4rem 0}
 
     /* CONTENT BOXES */
-    .about-box, .case-box, .list-box {
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,179,71,0.2);
-      border-radius: 1rem; padding: 1.25rem;
-      line-height: 1.75;
+    .about-box,.case-box,.list-box{
+      background:rgba(255,255,255,.15);
+      border:1px solid rgba(255,255,255,.3);
+      border-radius:1rem;padding:1.25rem;color:var(--ink);line-height:1.75
     }
+    strong{color:var(--burnt)}
 
-    /* PROJECT CARDS */
-    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
-    .card {
-      background: rgba(26, 36, 56, 0.55);
-      border: 1px solid rgba(255,179,71,0.3);
-      border-radius: 1rem; padding: 1rem;
-      transition: .3s ease;
+    /* CARDS & GRIDS */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+    .card{
+      background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.3);
+      border-radius:1rem;padding:1rem;transition:.3s ease;color:var(--ink)
     }
-    .card:hover { transform: translateY(-5px); border-color: var(--amber); box-shadow: 0 8px 18px rgba(255,179,71,0.15); }
-    .tag {
-      display:inline-block; background:rgba(255,179,71,0.15);
-      border:1px solid rgba(255,179,71,.45); border-radius:999px;
-      padding:.25rem .6rem; font-size:.7rem; color:var(--sunflower);
-    }
-    .inline-link { color: var(--amber); text-decoration: none; }
-    .inline-link:hover { text-decoration: underline; }
+    .card:hover{transform:translateY(-5px);border-color:var(--sunflower);box-shadow:0 8px 18px rgba(255,255,255,.25)}
+    .tag{display:inline-block;background:rgba(255,255,255,.3);border-radius:999px;padding:.25rem .6rem;font-size:.7rem;color:var(--burnt)}
+    .inline-link{color:var(--burnt);font-weight:600;text-decoration:none}
+    .inline-link:hover{text-decoration:underline}
 
-    /* PROFILE / PDFs */
-    .profile-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.2rem; margin-top:.6rem; }
-    .profile-card { background:rgba(255,255,255,.04); border:1px solid rgba(255,179,71,.2); border-radius:12px; padding:1rem; transition:all .25s ease; }
-    .profile-card:hover { transform:translateY(-4px); border-color:var(--sunflower); box-shadow:0 0 25px rgba(255,179,71,.12); }
-    .pdf-title { color:var(--sunflower); font-weight:800; margin-bottom:.4rem; font-size:1.06rem; letter-spacing:.15px; }
-    .pdf-iframe {
-      width:100%;
-      height: clamp(280px, 40vh, 420px); /* responsive; keeps PDFs from being huge */
-      border:none; border-radius:10px; background:#fff;
-    }
-    .pdf-link { display:inline-block; margin-top:.5rem; color:var(--sunflower); font-weight:700; text-decoration:none; }
+    /* PDF EMBEDS */
+    .profile-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:1.2rem;margin-top:.6rem}
+    .profile-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.3);border-radius:12px;padding:1rem}
+    .pdf-title{color:#5a2d00;font-weight:800;margin-bottom:.45rem}
+    .pdf-iframe{width:100%;height:clamp(280px,40vh,420px);border:none;border-radius:10px;background:#fff}
+    .pdf-link{display:inline-block;margin-top:.5rem;color:#5a2d00;font-weight:700;text-decoration:none}
 
-    /* FOOTER */
-    footer { text-align:center; padding:1.6rem 1rem 2rem; color:rgba(255,255,255,.6); font-size:.9rem; }
+    footer{text-align:center;padding:1.6rem 1rem 2rem;color:rgba(40,25,5,.9);font-weight:600;font-size:.9rem}
 
-    /* Accessibility + mobile */
-    a:focus-visible, button:focus-visible { outline: 2px dashed var(--sunflower); outline-offset: 3px; }
-    @media (max-width:780px){
-      nav a{ margin-left:.6rem; font-size:.9rem; }
-      .hero-title { font-size: 2.1rem; }
-    }
+    @media (max-width:780px){nav a{margin-left:.6rem;font-size:.9rem}}
   </style>
 </head>
 
 <body>
   <!-- NAV -->
-  <header aria-label="Primary">
+  <header>
     <div class="brand">
-      <div class="brand-badge" aria-hidden="true">🌻</div>
+      <div class="brand-badge">🌻</div>
       <div>
         <h1>Cybersecurity in Bloom</h1>
         <small>by Tazahnae Matthews</small>
       </div>
     </div>
-    <nav aria-label="Site">
+    <nav>
       <a href="#about">About</a>
       <a href="#work">Projects</a>
       <a href="#case-study">Case Study</a>
       <a href="#writeups">Writeups</a>
       <a href="#learning">Learning</a>
       <a href="#connect">Connect</a>
-      <!-- External -->
-      <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" rel="noreferrer noopener">Resume</a>
-      <a href="https://github.com/Tazahnae" target="_blank" rel="noreferrer noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/tazahnae-matthews-347124190" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+      <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" rel="noreferrer">Resume</a>
     </nav>
   </header>
 
   <!-- HERO -->
-  <section class="hero" aria-labelledby="hero-title">
-    <h1 id="hero-title" class="hero-title">Welcome To My Portfolio </h1>
-    <p class="hero-sub">Where Curiosity Meets Growth</p>
-    <div class="btn-row">
-      <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="btn-primary" aria-label="Open résumé in a new tab">
-        <i data-feather="file-text" aria-hidden="true"></i> View My Résumé
-      </a>
-      <a href="#work" class="btn-primary" style="background:linear-gradient(180deg, var(--amber), var(--burnt)); color:white;">
-        <i data-feather="folder" aria-hidden="true"></i> Featured Work
-      </a>
-    </div>
+  <section class="hero">
+    <h1 class="hero-title">Welcome To My Portfolio  </h1>
+    <p class="hero-sub"> Where Curiosity Meets Growth /p>
+    <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="btn-primary">
+      <i data-feather="file-text"></i> View My Résumé
+    </a>
   </section>
 
   <!-- ABOUT -->
-  <section class="section" id="about" aria-labelledby="about-title">
-    <div class="section-title"><i data-feather="user"></i><span id="about-title">About Me</span></div>
+  <section class="section" id="about">
+    <div class="section-title"><i data-feather="user"></i><span>About Me</span></div>
     <div class="about-box">
-      I’m <strong>Tazahnae Matthews</strong>. I enjoy building digital experiences that protect, educate, and inspire. My mission is to help my
-      community understand technology, explore cybersecurity with confidence, and take part in the next wave of innovation. Through hands on
-      labs and lifelong learning, I’m growing right alongside the evolution of tech.
-    </div>
-    <hr class="divider" />
-  </section>
-
-  <!-- RESUME (embedded) -->
-  <section class="section" id="resume" aria-labelledby="resume-title">
-    <div class="section-title"><i data-feather="file-text"></i><span id="resume-title">📄 Professional Résumé</span></div>
-    <div class="profile-card">
-      <p style="line-height:1.7;margin-bottom:.8rem;">
-        My résumé highlights experience across public service, project coordination, and cybersecurity training — bridging administration and
-        technology to support secure, efficient operations.
-      </p>
-      <!-- Embeds your GitHub Pages résumé page (kept as HTML so it stays current) -->
-      <object class="pdf-iframe" data="https://tazahnae.github.io/Tazahnae-s-Resume-/" type="text/html" aria-label="Embedded résumé preview">
-        <div class="pdf-fallback">
-          Preview not supported. <a class="inline-link" href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" rel="noreferrer noopener">Open Résumé ↗</a>
-        </div>
-      </object>
-      <div style="margin-top:.8rem; display:flex; gap:.6rem; flex-wrap:wrap;">
-        <a href="https://tazahnae.github.io/Tazahnae-s-Resume-/" target="_blank" class="btn-primary" rel="noreferrer noopener">🔗 Open Full Résumé</a>
-      </div>
-    </div>
+      I’m <strong>Tazahnae Matthews</strong>.  
+    </div>  Tazahnae Matthews, a purpose-driven cybersecurity learner and program manager passionate about protecting communities through technology and education. 
+    My journey bridges technical problem-solving with human impact from building secure virtual labs and automation tools to managing youth STEAM programs that empower 
+    the next generation of innovators. I believe cybersecurity isn’t just about defense it’s about curiosity, awareness, and growth. Every project I build is rooted in
+    the idea that knowledge should bloom and be shared, creating safer digital spaces for everyone.
     <hr class="divider"/>
   </section>
 
+  
   <!-- FEATURED WORK -->
-  <section class="section" id="work" aria-labelledby="work-title">
-    <div class="section-title"><i data-feather="folder"></i><span id="work-title">Featured Work</span></div>
-    <p style="margin:-.3rem 0 1.1rem 0; opacity:.92">
-      These projects showcase  my work in cloud security, virtualization, and automation each one a petal in my security garden 🌻.
-    </p>
+  <section class="section" id="work">
+    <div class="section-title"><i data-feather="folder"></i><span>Featured Work</span></div>
+    <p style="margin:-.3rem 0 1.1rem 0; opacity:.95"> Below is are some of my projects in 
+      Cloud security, virtualization, and automation each project is a petal in my security garden 🌻.</p>
 
     <div class="projects-grid">
       <article class="card">
         <span class="tag">AWS • Terraform • Security</span>
-        <h3 style="margin:.45rem 0 .35rem 0; color:var(--sunflower)">AWS Passwordless Authentication & SOC Simulation</h3>
-        <p style="margin:0 0 .7rem 0;">IAM & security foundation with Cognito (WebAuthn) + MFA; continuous monitoring with Security Hub, GuardDuty, CloudTrail, and Config.</p>
-        <a class="inline-link" href="https://github.com/Tazahnae/aws_auth_grc" target="_blank" rel="noreferrer noopener">View repo ↗</a>
+        <h3 style="margin:.4rem 0 .35rem 0;color:var(--burnt)">AWS Passwordless Authentication & SOC Simulation</h3>
+        <p>IAM & security foundation with Cognito (WebAuthn) + MFA; continuous monitoring with Security Hub, GuardDuty, CloudTrail, and Config.</p>
+        <a class="inline-link" href="https://github.com/Tazahnae/aws_auth_grc" target="_blank" rel="noreferrer">View repo ↗</a>
       </article>
 
       <article class="card">
         <span class="tag">Virtualization</span>
-        <h3 style="margin:.45rem 0 .35rem 0; color:var(--sunflower)">Virtual Machine Lab (UTM on Mac)</h3>
-        <p style="margin:0 0 .7rem 0;">Practice range on an M1 Mac using UTM: Kali, Metasploitable 2, and Windows Server 2022 with basic networking and secure setups.</p>
-        <a class="inline-link" href="https://github.com/Tazahnae/tazahnaes-sandcastle" target="_blank" rel="noreferrer noopener">View setup ↗</a>
+        <h3 style="margin:.4rem 0 .35rem 0;color:var(--burnt)">Virtual Machine Lab (UTM on Mac)</h3>
+        <p>Practice range on an M1 Mac using UTM: Kali, Metasploitable 2, and Windows Server 2022 with secure networking.</p>
+        <a class="inline-link" href="https://github.com/Tazahnae/tazahnaes-sandcastle" target="_blank" rel="noreferrer">View setup ↗</a>
       </article>
 
       <article class="card">
         <span class="tag">Chatbot • AI</span>
-        <h3 style="margin:.45rem 0 .35rem 0; color:var(--sunflower)">Chatty Bot Project</h3>
-        <p style="margin:0 0 .7rem 0;">Custom CLI chatbot to practice logic, user interaction, and simple automation to support cyber learning.</p>
-        <a class="inline-link" href="https://github.com/Tazahnae/Tazahnae-s-Chatty-bot" target="_blank" rel="noreferrer noopener">View Chatbot Repo ↗</a>
+        <h3 style="margin:.4rem 0 .35rem 0;color:var(--burnt)">Chatty Bot Project</h3>
+        <p>Custom CLI chatbot to practice logic, user interaction, and simple automation to support cyber learning.</p>
+        <a class="inline-link" href="https://github.com/Tazahnae/Tazahnae-s-Chatty-bot" target="_blank" rel="noreferrer">View Chatbot Repo ↗</a>
       </article>
     </div>
     <hr class="divider"/>
   </section>
 
   <!-- CASE STUDY -->
-  <section class="section" id="case-study" aria-labelledby="case-title">
-    <div class="section-title"><i data-feather="shield"></i><span id="case-title">🧩 Case Study — Kali Linux Attack on Metasploitable 2</span></div>
+  <section class="section" id="case-study">
+    <div class="section-title"><i data-feather="shield"></i><span>🧩 Case Study Capstone Project  — Kali Linux Attack on Metasploitable 2</span></div>
     <div class="case-box">
-      <p><strong>Overview:</strong>  Here is a project in which i have built a controlled cybersecurity simulation designed to explore system vulnerabilities, evaluate firewall protection, and document network security behavior through hands-on testing and analysis.</p>
-      <p><strong>Objective:</strong> Simulate a realistic penetration test using Kali Linux (attacker) against a vulnerable Metasploitable 2 machine (target), with all traffic routed through a pfSense firewall to observe attack paths and defensive logging.</p>
-      <p><strong>Environment:</strong> Built in UTM on macOS with three isolated VMs — Kali Linux, Metasploitable 2, and pfSense acting as the gateway.</p>
-      <p><strong>Tools Used:</strong> Kali • Metasploitable 2 • pfSense • Nmap • Metasploit • Wireshark • UTM</p>
-      <p><strong>Findings:</strong> Multiple insecure services (FTP/Telnet/web apps) enabled exploitation; Wireshark confirmed attack patterns; pfSense logged and filtered malicious traffic effectively with tighter rules.</p>
-      <p><strong>Remediation:</strong> Hardened firewall rules, enabled IDS/IPS, recommended patching and service hardening; documented replay steps for reproducibility.</p>
-      <p><strong>Outcome:</strong> Reinforced SOC concepts — detection, segmentation, response, and clear reporting in a safe, repeatable lab.</p>
-      <p><a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="inline-link" rel="noreferrer noopener">📘 View Full Case Study PDF ↗</a></p>
+      <p><strong>Overview:</strong>  I built a cybersecurity simulation exploring vulnerabilities, firewall defense, and monitoring within a virtualized lab environment</p>
+      <p><strong>Objective:</strong>  The objective was to Simulate a penetration test using Kali (attacker) vs. Metasploitable 2 (target), routing traffic through pfSense for logging/inspection.</p>
+      <p><strong>Environment:</strong>  The environment i used was UTM on macOS with three isolated VMs  Kali, Metasploitable 2, and pfSense as the gateway.</p>
+      <p><strong>Tools:</strong> Kali • Metasploitable 2 • pfSense • Nmap • Metasploit • Wireshark • UTM</p>
+      <p><strong>Findings:</strong>  I found that Insecure services enabled exploitation; Wireshark confirmed patterns; pfSense filtered/logged malicious traffic with tighter rules.</p>
+      <p><strong>Remediation:</strong>  In order to do remediation I had to Harden the firewall rules, enabled IDS/IPS, patched services, documented replay steps.</p>
+      <p><a href="docs/Final%20Project%20Summary%20%E2%80%93%20TaZahnae%20Matthews.pdf" target="_blank" class="inline-link" rel="noreferrer">📘 View Full Case Study PDF ↗</a></p>
     </div>
     <hr class="divider"/>
   </section>
 
   <!-- FEATURED WRITEUPS (EMBEDDED PDFs) -->
-  <section class="section" id="writeups" aria-labelledby="writeups-title">
-    <div class="section-title"><i data-feather="book-open"></i><span id="writeups-title">Featured Writeups & Summaries</span></div>
-    <p style="margin:-.3rem 0 1rem; opacity:.92"> Below are my independent projects that highlight hands-on experience.</p>
+  <section class="section" id="writeups">
+    <div class="section-title"><i data-feather="book-open"></i><span>Featured Writeups & Summaries</span></div>
+    <p style="margin:-.3rem 0 1rem; opacity:.95"> Below are my independent projects that highlight my experience.</p>
 
     <div class="profile-grid">
       <!-- Firewall Simulation -->
       <div class="profile-card">
         <div class="pdf-title">🔥 Firewall Simulation — Quick Summary</div>
         <object class="pdf-iframe" data="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" type="application/pdf">
-          <p>Can’t preview here — <a class="pdf-link" href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" rel="noreferrer noopener">open the PDF ↗</a></p>
+          <p>Can’t preview here — <a class="pdf-link" href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" rel="noreferrer">open the PDF ↗</a></p>
         </object>
-        <a href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" class="pdf-link" rel="noreferrer noopener">Open Full PDF ↗</a>
+        <a href="docs/%F0%9F%94%92%20Firewall%20Simulation%20%E2%80%93%20Quick%20Summary%20.pdf" target="_blank" class="pdf-link" rel="noreferrer">Open Full PDF ↗</a>
       </div>
 
       <!-- Network Lab Summary -->
       <div class="profile-card">
         <div class="pdf-title">🌐 Network Lab Summary — Packet Tracer</div>
         <object class="pdf-iframe" data="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" type="application/pdf">
-          <p>Can’t preview here — <a class="pdf-link" href="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" target="_blank" rel="noreferrer noopener">open the PDF ↗</a></p>
+          <p>Can’t preview here — <a class="pdf-link" href="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" target="_blank" rel="noreferrer">open the PDF ↗</a></p>
         </object>
-        <a href="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link" rel="noreferrer noopener">Open Full PDF ↗</a>
+        <a href="docs/Network%20Lab%20Summary%20-%20TaZahnae%20Matthews.pdf" target="_blank" class="pdf-link" rel="noreferrer">Open Full PDF ↗</a>
       </div>
     </div>
     <hr class="divider"/>
   </section>
 
-  <!-- LEARNING & CREDENTIALS -->
-  <section class="section" id="learning" aria-labelledby="learning-title">
-    <div class="section-title"><i data-feather="activity"></i><span id="learning-title">🚀 Learning & Credentials</span></div>
+  <!-- LEARNING & CREDENTIALS (IN PROGRESS • TRYHACKME • CREDLY) -->
+  <section class="section" id="learning">
+    <div class="section-title"><i data-feather="activity"></i><span>🚀 Learning & Credentials</span></div>
     <div class="list-box">
       <strong>🎯 In Progress (2025):</strong>
       <ul>
@@ -321,7 +234,6 @@
         <li>The Knowledge House — Cybersecurity & Innovation Fellowship</li>
       </ul>
 
- 
       <strong>🛡️ TryHackMe — Completed Rooms (selection):</strong>
       <ul>
         <li>Intro to Cyber Security</li>
@@ -337,7 +249,7 @@
         <li>Burp Suite Basics</li>
         <li>Privilege Escalation</li>
       </ul>
-      <a class="inline-link" href="https://tryhackme.com/p/matthewstaaj?tab=completed-rooms" target="_blank" rel="noreferrer noopener">View Full TryHackMe Profile ↗</a>
+      <a class="inline-link" href="https://tryhackme.com/p/matthewstaaj?tab=completed-rooms" target="_blank" rel="noreferrer">View Full TryHackMe Profile ↗</a>
 
       <strong>🏅 Credly — Badges:</strong>
       <ul>
@@ -348,39 +260,36 @@
         <li>AWS Educate Introduction to Cloud 101 — Training Badge (Jun 17, 2025)</li>
         <li>Cisco Networking Academy: Networking Basics (Apr 2, 2025)</li>
       </ul>
-      <a class="inline-link" href="https://www.credly.com/users/tazahnae-matthews" target="_blank" rel="noreferrer noopener">View Full Credly Profile ↗</a>
+      <a class="inline-link" href="https://www.credly.com/users/tazahnae-matthews" target="_blank" rel="noreferrer">View Full Credly Profile ↗</a>
     </div>
     <hr class="divider"/>
   </section>
 
   <!-- CONNECT -->
-  <section class="section" id="connect" aria-labelledby="connect-title">
-    <div class="section-title"><i data-feather="mail"></i><span id="connect-title">Let’s Connect</span></div>
+  <section class="section" id="connect">
+    <div class="section-title"><i data-feather="mail"></i><span>Let’s Connect</span></div>
     <p>📫 I’m always open to collaborating on projects, sharing knowledge, or connecting with others passionate about cybersecurity and tech education.</p>
 
-    <!-- Contact form (FormSubmit.co) -->
     <form action="https://formsubmit.co/t.matthews@steamforme.org" method="POST" style="max-width:520px;display:grid;gap:.65rem;margin-top:1rem;">
       <input type="hidden" name="_subject" value="New message from your Cyber Blooms landing page" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
       <input type="text" name="name" placeholder="Your name" required
-             style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,179,71,0.25);border-radius:.7rem;padding:.6rem .6rem;color:#fff;">
+             style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);border-radius:.7rem;padding:.6rem .6rem;color:#fff;">
       <input type="email" name="email" placeholder="Your email" required
-             style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,179,71,0.25);border-radius:.7rem;padding:.6rem .6rem;color:#fff;">
+             style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);border-radius:.7rem;padding:.6rem .6rem;color:#fff;">
       <textarea name="message" rows="4" placeholder="How can we work together?" required
-                style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,179,71,0.25);border-radius:.7rem;padding:.6rem .6rem;color:#fff;"></textarea>
+                style="background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);border-radius:.7rem;padding:.6rem .6rem;color:#fff;"></textarea>
       <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">
         <i data-feather="send"></i> Send Message
       </button>
     </form>
 
-    <p style="margin-top:1rem;">
-      Or email me directly: <a href="mailto:t.matthews@steamforme.org" class="inline-link">t.matthews@steamforme.org</a>
-    </p>
+    <p style="margin-top:1rem;">Or email me directly: <a href="mailto:t.matthews@steamforme.org" class="inline-link">t.matthews@steamforme.org</a></p>
   </section>
 
   <footer>
-    © <span id="year"></span> Tazahnae Matthews • Cybersecurity in Bloom 🌻
+    © <span id="year"></span> Tazahnae Matthews • Where Curiosity Meets Growth 🌻
   </footer>
 
   <script>
